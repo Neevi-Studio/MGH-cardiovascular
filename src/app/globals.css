@@ -33,3 +33,14 @@
   display: flex;
   gap: 2rem;
 }
+
+@media (max-width: 1280px){
+  .custom-container{
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+  
+  .inner-container{
+    gap: 0.9rem;
+  }
+}

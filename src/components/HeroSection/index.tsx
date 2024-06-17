@@ -15,7 +15,7 @@ function HeroSection() {
           all delivered by our leading specialists. Experience the difference
           with MGH Cardiovascular Associates.
         </p>
-        <div className="mx-auto flex items-center gap-3">
+        <div className="mx-auto max-xl:flex-col-reverse flex items-center gap-3">
           <Button
             size="lg"
             color="primary"

@@ -13,9 +13,9 @@ function OurCardiologistSection() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="inner-container relative flex-col items-center xl:items-end rounded-3xl p-10 py-16 xl:h-full xl:w-full"
+        className="inner-container relative flex-col items-center rounded-3xl p-10 py-16 xl:h-full xl:w-full xl:items-end"
       >
-        <div className="absolute hidden xl:block -left-14 -top-14 size-56 rounded-3xl bg-primary bg-gradient-to-br from-primary to-primary-50" />
+        <div className="absolute -left-14 -top-14 hidden size-56 rounded-3xl bg-primary bg-gradient-to-br from-primary to-primary-50 xl:block" />
         <Button
           size="lg"
           color="primary"
@@ -31,7 +31,7 @@ function OurCardiologistSection() {
           alt="Mirette Habib"
         />
 
-        <div className="flex w-full items-center gap-6">
+        <div className="flex w-full items-center gap-6 max-xl:flex-col">
           <Button
             size="lg"
             color="primary"
@@ -63,7 +63,7 @@ function OurCardiologistSection() {
           personalized and effective cardiac
           <span className="block">care at MGH Cardiovascular Associates.</span>
         </p>
-        <div className="flex xl:items-start items-center justify-between gap-16 text-lg max-xl:flex-col">
+        <div className="flex items-center justify-between gap-8 text-lg max-xl:mt-8 max-xl:flex-col xl:items-start xl:gap-16">
           <div className="flex w-full flex-col gap-3 max-xl:items-center max-xl:text-center">
             <div className="w-fit rounded-xl bg-primary-50 p-3.5">
               <Image
