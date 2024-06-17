@@ -13,7 +13,7 @@ function ControlYourHeartHealthVideoSection() {
           quality and
           <span className="block">longevity.</span>
         </p>
-        <Button color="primary" size="lg" className="w-fit">
+        <Button color="primary" size="lg" className="w-fit max-xl:mx-auto">
           Request Appointment
         </Button>
       </div>
