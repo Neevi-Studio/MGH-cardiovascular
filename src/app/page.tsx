@@ -1,5 +1,6 @@
 import AboutUsSection from "@/components/AboutUsSection";
-import BookAnAppointment from "@/components/BookAnAppointment";
+import BookAnAppointmentFormSection from "@/components/BookAnAppointmentFormSection";
+import BookAnAppointmentSection from "@/components/BookAnAppointmentSection";
 import ControlYourHeartHealthVideoSection from "@/components/ControlYourHeartHealthVideoSection";
 import HeroSection from "@/components/HeroSection";
 import InsuranceAndPaymentOptions from "@/components/InsuranceAndPaymentOptions";
@@ -26,7 +27,9 @@ export default function Home() {
 
       <div className={mainStyles}>
         <InsuranceAndPaymentOptions />
-        <BookAnAppointment />
+        <BookAnAppointmentSection />
+        {/* TODO: Testimonials */}
+        <BookAnAppointmentFormSection />
       </div>
     </main>
   );

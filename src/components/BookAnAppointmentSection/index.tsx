@@ -42,7 +42,7 @@ const workingProgramData = [
   },
 ];
 
-function BookAnAppointment() {
+function BookAnAppointmentSection() {
   return (
     <section className="custom-container flex-col overflow-hidden rounded-3xl bg-primary text-white xl:!gap-0">
       <div className="inner-container mr-auto flex-col xl:w-[40%]">
@@ -73,4 +73,4 @@ function BookAnAppointment() {
   );
 }
 
-export default BookAnAppointment;
+export default BookAnAppointmentSection;
