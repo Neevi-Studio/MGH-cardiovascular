@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { scrollToElementById } from "../NavBar";
 
 function HeroSection() {
   return (
@@ -10,13 +13,14 @@ function HeroSection() {
         <h1 className="text-2xl text-primary xl:text-4xl">
           Leading Interventional & General Cardiology Services
         </h1>
-        <p className="text-gray text-xl">
+        <p className="text-xl text-gray">
           Explore expert cardiology services tailored for optimal heart health,
           all delivered by our leading specialists. Experience the difference
           with MGH Cardiovascular Associates.
         </p>
-        <div className="mx-auto max-xl:flex-col-reverse flex items-center gap-3">
+        <div className="mx-auto flex items-center gap-3 max-xl:flex-col-reverse">
           <Button
+            onClick={() => scrollToElementById("our-services")}
             size="lg"
             color="primary"
             className="font-medium"
@@ -24,7 +28,11 @@ function HeroSection() {
           >
             Our Services
           </Button>
-          <Button size="lg" color="primary">
+          <Button
+            onClick={() => scrollToElementById("our-cardiologist")}
+            size="lg"
+            color="primary"
+          >
             Meet Our Cardiologist{" "}
             <MdOutlineArrowOutward size={30} className="rotate-90" />
           </Button>

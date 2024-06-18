@@ -9,7 +9,7 @@ const nextUiInputClassNames = {
 
 function BookAnAppointmentFormSection() {
   return (
-    <section className="custom-container flex-col text-primary">
+    <section id="request-appointment" className="custom-container flex-col text-primary">
       <h2 className="text-3xl xl:text-5xl">Schedule Your Visit</h2>
       <p className="flex flex-col items-center text-center text-lg font-bold xl:text-2xl">
         <span>Book an appointment with our </span>

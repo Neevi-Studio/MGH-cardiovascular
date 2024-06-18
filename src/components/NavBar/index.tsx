@@ -10,7 +10,6 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -44,13 +43,13 @@ function NavBarItemLink({
   );
 }
 
-// export const scrollToElementById = (id: string) => {
-//   const element = document.getElementById(id);
-//   if (element) {
-//     const y = element.getBoundingClientRect().top + window.scrollY - fixedScrollOffset;
-//     window.scrollTo({ top: y, behavior: "smooth" });
-//   }
-// };
+export const scrollToElementById = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    const y = element.getBoundingClientRect().top + window.scrollY - fixedScrollOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+};
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -98,7 +97,7 @@ function NavBar() {
   return (
     <Navbar
       maxWidth="full"
-      className="mx-auto mt-8 max-w-screen-xl w-[90%]  rounded-xl border border-primary bg-white/90 p-2"
+      className="mx-auto mt-8 w-[90%] max-w-screen-xl rounded-xl border border-primary bg-white/90 p-2"
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
       style={{ height: "60px" }}
@@ -114,7 +113,7 @@ function NavBar() {
           spy={true}
           smooth={true}
           offset={-fixedScrollOffset}
-          className="z-10 flex items-center max-md:ml-auto justify-center hover:cursor-pointer"
+          className="z-10 flex items-center justify-center hover:cursor-pointer max-md:ml-auto"
         >
           <NavbarBrand className="max-md:justify-end">
             <Image src={"logo.svg"} width={275} height={46.25} alt="brand" />
@@ -135,7 +134,7 @@ function NavBar() {
         >
           <ScrollLink
             to={"request-appointment"}
-            activeClass="font-bold text-primary"
+            activeClass="font-bold text-gray-medium"
             spy={true}
             smooth={true}
             offset={-fixedScrollOffset}
@@ -145,7 +144,7 @@ function NavBar() {
           </ScrollLink>
         </Button>
       </NavbarContent>
-      <NavbarMenu className="pt-14 px-[10%]">
+      <NavbarMenu className="px-[10%] pt-14">
         {menuItems.map((item, index) => (
           <NavbarMenuItem
             key={`${item}-${index}`}
@@ -170,7 +169,7 @@ function NavBar() {
             <ScrollLink
               onClick={() => setIsMenuOpen(false)}
               to={"request-appointment"}
-              activeClass="font-bold text-white"
+              activeClass="font-bold text-gray-medium"
               spy={true}
               smooth={true}
               offset={-fixedScrollOffset}

@@ -1,5 +1,8 @@
+"use client"
+
 import { Button } from "@nextui-org/react";
 import React from "react";
+import { scrollToElementById } from "../NavBar";
 
 function ControlYourHeartHealthVideoSection() {
   return (
@@ -13,7 +16,12 @@ function ControlYourHeartHealthVideoSection() {
           quality and
           <span className="block">longevity.</span>
         </p>
-        <Button color="primary" size="lg" className="w-fit max-xl:mx-auto">
+        <Button
+          onClick={() => scrollToElementById("request-appointment")}
+          color="primary"
+          size="lg"
+          className="w-fit max-xl:mx-auto"
+        >
           Request Appointment
         </Button>
       </div>

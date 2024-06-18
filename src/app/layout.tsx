@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import NavBar from "@/components/NavBar";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-white`}>
         <Providers>
+          <div className="bg-primary h-9 w-full flex items-center justify-center text-white text-sm">
+            <div className="max-w-screen-2xl flex w-full items-center justify-between">
+              <Link href={'https://maps.google.com'} target="_blank">Address: 680 Broadway, Suite No. 503, Paterson, NJ 07514</Link>
+              <Link href={'tel:9736535867'}>Call Us : (973) 653-5867</Link>
+            </div>
+          </div>
           <div className="fixed w-full z-[999]">
             <NavBar />
           </div>

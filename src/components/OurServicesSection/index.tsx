@@ -1,6 +1,8 @@
+"use client";
 import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import React from "react";
+import { scrollToElementById } from "../NavBar";
 
 type ServiceProps = {
   icon: string;
@@ -10,7 +12,7 @@ type ServiceProps = {
 
 function Service({ icon, title, text }: ServiceProps) {
   return (
-    <div className="flex max-xl:flex-col items-center gap-3">
+    <div className="flex items-center gap-3 max-xl:flex-col">
       <div className="mb-auto shrink-0 content-center rounded-2xl border-1 border-primary px-6 py-3 align-middle">
         <Image
           src={`icons/services/${icon}`}
@@ -70,18 +72,23 @@ function OurServicesSection() {
         <h2 className="mx-auto text-3xl font-bold text-black">
           Heart Care<span className="block">Reimagined</span>
         </h2>
-        <p className="text-gray text-center text-xl">
+        <p className="text-center text-xl text-gray">
           Expert care across a spectrum of heart health needs, delivered with
           precision and compassion.
         </p>
       </div>
 
-      <div className="inner-container !grid grid-cols-1 xl:!gap-x-16 max-xl:!gap-y-8 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="inner-container !grid grid-cols-1 max-xl:!gap-y-8 lg:grid-cols-2 xl:grid-cols-3 xl:!gap-x-16">
         {ServicesData.map((data, index) => (
           <Service key={index} {...data} />
         ))}
       </div>
-      <Button color="primary" size="lg" className="text-lg max-xl:mt-4">
+      <Button
+        onClick={() => scrollToElementById("request-appointment")}
+        color="primary"
+        size="lg"
+        className="text-lg max-xl:mt-4"
+      >
         Request Appointment
       </Button>
     </section>

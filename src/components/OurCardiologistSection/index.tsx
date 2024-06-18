@@ -5,7 +5,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 function OurCardiologistSection() {
   return (
-    <section className="custom-container max-xl:flex-col">
+    <section id="our-cardiologist" className="custom-container max-xl:flex-col">
       <div
         style={{
           backgroundImage: "url('/images/our-cardiologist-bg.svg')",
