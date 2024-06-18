@@ -1,6 +1,4 @@
 import Image from "next/image";
-import React from "react";
-import Marquee from "react-fast-marquee";
 
 type CardProps = {
   text: string;
@@ -10,7 +8,7 @@ type CardProps = {
 
 function Card({ text, image, nameAndRole }: CardProps) {
   return (
-    <div className="flex h-full flex-col items-center justify-center gap-8 rounded-2xl border border-gray-medium bg-white p-8 text-black shadow-md mt-8">
+    <div className="testimonials-slide mt-8 flex h-full flex-col items-center justify-center gap-8 rounded-2xl border border-gray-medium bg-white p-8 text-black shadow-md">
       <p>{text}</p>
 
       <div className="flex items-center gap-2">
@@ -29,6 +27,11 @@ function Card({ text, image, nameAndRole }: CardProps) {
 
 const cardsData = {
   first: [
+    {
+      text: "After my vein treatment at MGH Cardiovascular Associates, I not only feel better but also have renewed confidence. The staff was incredibly professional and made sure I was comfortable throughout the process",
+      image: "emma.svg",
+      nameAndRole: "Emma C., Patient",
+    },
     {
       text: "After my vein treatment at MGH Cardiovascular Associates, I not only feel better but also have renewed confidence. The staff was incredibly professional and made sure I was comfortable throughout the process",
       image: "emma.svg",
@@ -90,31 +93,16 @@ function Testimonials() {
           What our Patients say about<span className="block">us?</span>
         </h2>
       </div>
-
-      <div className="inner-container h-[30rem] overflow-hidden">
-        {/* <Marquee className="overflow-hidden"> */}
-        <div className="inner-container flex-col">
+      <div className="testimonials-slider">
+        <div className="testimonials-slide-tracker">
+          {/* It MUST be duplicated 2 times */}
           {cardsData.first.map((data, index) => (
             <Card key={index} {...data} />
           ))}
-        </div>
-        {/* </Marquee> */}
-
-        {/* <Marquee className="overflow-hidden"> */}
-        <div className="inner-container flex-col">
           {cardsData.first.map((data, index) => (
-            <Card key={index} {...data} />
+            <Card key={index + cardsData.first.length} {...data} />
           ))}
         </div>
-        {/* </Marquee> */}
-
-        {/* <Marquee className="overflow-hidden"> */}
-        <div className="inner-container flex-col">
-          {cardsData.first.map((data, index) => (
-            <Card key={index} {...data} />
-          ))}
-        </div>
-        {/* </Marquee> */}
       </div>
     </section>
   );
