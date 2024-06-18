@@ -5,7 +5,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 function HeroSection() {
   return (
-    <section className="custom-container max-xl:flex-col">
+    <section id="home" className="custom-container max-xl:flex-col">
       <div className="inner-container flex-col">
         <h1 className="text-2xl text-primary xl:text-4xl">
           Leading Interventional & General Cardiology Services

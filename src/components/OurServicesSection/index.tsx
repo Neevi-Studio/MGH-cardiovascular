@@ -62,7 +62,7 @@ const ServicesData = [
 
 function OurServicesSection() {
   return (
-    <section className="custom-container flex-col">
+    <section id="our-services" className="custom-container flex-col">
       <div className="inner-container flex-col">
         <p className="text-center text-xl text-primary">
           Our <span className="block">Services</span>

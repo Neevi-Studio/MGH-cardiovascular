@@ -49,7 +49,7 @@ const cardsData = [
 
 function AboutUsSection() {
   return (
-    <section className="custom-container flex-col">
+    <section id="about-us" className="custom-container flex-col">
       <div className="inner-container flex-col">
         <p className="text-center text-xl text-primary">
           About <span className="block">us</span>
