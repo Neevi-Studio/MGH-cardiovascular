@@ -59,7 +59,7 @@
 .testimonials-slide-tracker {
   display: flex;
   flex-direction: column;
-  height: calc(15rem * 8); /* the height of single slide * n */
+  height: calc((15rem) * 8); /* Height of a single slide multiplied by total number of slides (duplicated set) */
   animation: loop-scroll 3s linear infinite;
 }
 
@@ -72,8 +72,7 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(
-      calc(-15rem * 4)
-    ); /* height of single slide * (total slides / 2) */
+    transform: translateY(calc((-15rem + 2.5rem) * 4.1)); 
+    /* Height of a single slide multiplied by total number of original slides*/
   }
 }

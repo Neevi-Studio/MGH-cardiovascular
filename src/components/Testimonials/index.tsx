@@ -1,29 +1,6 @@
 import Image from "next/image";
+import TestimonialsSlider from "./TestimonialsSlider";
 
-type CardProps = {
-  text: string;
-  image: string;
-  nameAndRole: string;
-};
-
-function Card({ text, image, nameAndRole }: CardProps) {
-  return (
-    <div className="testimonials-slide mt-8 flex h-full flex-col items-center justify-center gap-8 rounded-2xl border border-gray-medium bg-white p-8 text-black shadow-md">
-      <p>{text}</p>
-
-      <div className="flex items-center gap-2">
-        <Image
-          src={`images/testimonials/${image}`}
-          width={42}
-          height={42}
-          alt={image}
-          // className="rounded-full"
-        />
-        <h3 className="text-2xl">{nameAndRole}</h3>
-      </div>
-    </div>
-  );
-}
 
 const cardsData = {
   first: [
@@ -93,16 +70,10 @@ function Testimonials() {
           What our Patients say about<span className="block">us?</span>
         </h2>
       </div>
-      <div className="testimonials-slider">
-        <div className="testimonials-slide-tracker">
-          {/* It MUST be duplicated 2 times */}
-          {cardsData.first.map((data, index) => (
-            <Card key={index} {...data} />
-          ))}
-          {cardsData.first.map((data, index) => (
-            <Card key={index + cardsData.first.length} {...data} />
-          ))}
-        </div>
+      <div className="flex gap-8">
+          <TestimonialsSlider key={1} data={cardsData.first} />
+          <TestimonialsSlider key={2} data={cardsData.first} />
+          <TestimonialsSlider key={3} data={cardsData.first} />
       </div>
     </section>
   );
