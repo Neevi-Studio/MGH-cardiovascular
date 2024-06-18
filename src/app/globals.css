@@ -48,7 +48,10 @@
   }
 }
 
-/* Testimonials carousel */
+
+/*  */
+/* Testimonials infinite vertical carousel */
+
 .testimonials-slider {
   height: 40rem;
   margin: auto;
@@ -60,7 +63,7 @@
   display: flex;
   flex-direction: column;
   height: calc(
-    15rem * 8
+    17.5rem * 8
   ); /* Height of a single slide * multiplied by total number of slides (total number after duplication) */
   animation: loop-scroll 30s linear infinite;
 }
@@ -69,13 +72,13 @@
   display: flex;
   flex-direction: column;
   height: calc(
-    15rem * 8
+    17.5rem * 8
   ); /* Height of a single slide * multiplied by total number of slides (total number after duplication) */
   animation: loop-scroll 22s linear infinite;
 }
 
 .testimonials-slide {
-  height: 15rem;
+  height: 17.5rem;
 }
 
 @keyframes loop-scroll {
@@ -83,11 +86,13 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(calc((-15rem - 2rem) * 4));
+    transform: translateY(calc((-17.5rem - 2rem) * 4));
     /* (Height of a single slide - gap between slides) * total number of original slides*/
   }
 }
 
+
+/* For the gradients */
 .testimonials-sliders-wrapper::before,
 .testimonials-sliders-wrapper::after {
   content: "";
