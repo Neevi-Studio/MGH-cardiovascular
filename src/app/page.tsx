@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import InsuranceAndPaymentOptions from "@/components/InsuranceAndPaymentOptions";
 import OurCardiologistSection from "@/components/OurCardiologistSection";
 import OurServicesSection from "@/components/OurServicesSection";
+import Testimonials from "@/components/Testimonials";
 
 const mainStyles = ` mx-auto flex max-xl:text-center max-w-screen-2xl flex-col gap-10 lg:p-10 p-5 xl:gap-20 xl:p-20 `;
 
@@ -28,7 +29,7 @@ export default function Home() {
       <div className={mainStyles}>
         <InsuranceAndPaymentOptions />
         <BookAnAppointmentSection />
-        {/* TODO: Testimonials */}
+        <Testimonials />
         <BookAnAppointmentFormSection />
       </div>
     </main>
