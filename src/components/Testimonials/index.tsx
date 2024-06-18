@@ -27,34 +27,44 @@ const cardsData = {
   second: [
     {
       text: "",
-      image: ".svg",
+      image: "",
       nameAndRole: "",
     },
     {
       text: "",
-      image: ".svg",
+      image: "",
       nameAndRole: "",
     },
     {
       text: "",
-      image: ".svg",
+      image: "",
+      nameAndRole: "",
+    },
+    {
+      text: "",
+      image: "",
       nameAndRole: "",
     },
   ],
   third: [
     {
       text: "",
-      image: ".svg",
+      image: "",
       nameAndRole: "",
     },
     {
       text: "",
-      image: ".svg",
+      image: "",
       nameAndRole: "",
     },
     {
       text: "",
-      image: ".svg",
+      image: "",
+      nameAndRole: "",
+    },
+    {
+      text: "",
+      image: "",
       nameAndRole: "",
     },
   ],
