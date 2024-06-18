@@ -26,10 +26,15 @@ function Card({ text, image, nameAndRole }: CardProps) {
   );
 }
 
-function TestimonialsSlider({ data }: { data: CardProps[] }) {
+function TestimonialsSlider({
+  data,
+  faster,
+}: { data: CardProps[] } & { faster?: boolean }) {
   return (
     <div className="testimonials-slider">
-      <div className="testimonials-slide-tracker gap-8">
+      <div
+        className={`${faster ? "testimonials-slide-tracker-faster" : "testimonials-slide-tracker"} gap-8`}
+      >
         {/* It MUST be duplicated 2 times */}
         {data.map((card, index) => (
           <Card key={index} {...card} />

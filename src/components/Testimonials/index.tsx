@@ -1,7 +1,6 @@
 import Image from "next/image";
 import TestimonialsSlider from "./TestimonialsSlider";
 
-
 const cardsData = {
   first: [
     {
@@ -70,10 +69,12 @@ function Testimonials() {
           What our Patients say about<span className="block">us?</span>
         </h2>
       </div>
-      <div className="flex gap-8">
+      <div className="testimonials-sliders-wrapper relative overflow-hidden">
+        <div className="flex gap-8 p-4" >
           <TestimonialsSlider key={1} data={cardsData.first} />
-          <TestimonialsSlider key={2} data={cardsData.first} />
+          <TestimonialsSlider faster key={2} data={cardsData.first} />
           <TestimonialsSlider key={3} data={cardsData.first} />
+        </div>
       </div>
     </section>
   );
