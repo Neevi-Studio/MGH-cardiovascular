@@ -37,7 +37,7 @@ export default function Home() {
         <Testimonials />
       </div>
 
-      <div className="mx-auto p-8">
+      <div className="mx-auto p-2 xl:p-8">
         <BookAnAppointmentFormSection />
       </div>
 

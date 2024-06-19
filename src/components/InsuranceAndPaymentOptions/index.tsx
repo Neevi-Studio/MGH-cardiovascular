@@ -4,7 +4,7 @@ import React from "react";
 function InsuranceAndPaymentOptions() {
   return (
     <section className="custom-container overflow-hidden rounded-3xl bg-primary !p-0 text-white max-xl:flex-col">
-      <div className="inner-container w-full flex-col xl:p-[2.5rem] p-8 max-xl:mb-8">
+      <div className="inner-container w-full flex-col p-8 max-xl:mb-8 xl:p-[2.5rem]">
         <h2 className="text-xl font-bold xl:text-3xl">
           Insurance and Payment Options
         </h2>
@@ -18,7 +18,7 @@ function InsuranceAndPaymentOptions() {
       </div>
       <div className="relative h-full xl:w-[70%]">
         <Image
-          className="absolute max-xl:left-[50%] max-xl:-translate-x-[50%] max-xl:-top-16 xl:-left-[68px] xl:top-16"
+          className="absolute max-xl:-top-16 max-xl:left-[50%] max-xl:-translate-x-[50%] xl:-left-[68px] xl:top-16"
           src={"icons/insurance-and-payment-options.svg"}
           height={136}
           width={136}

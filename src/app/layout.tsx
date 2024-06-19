@@ -22,20 +22,31 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-white`}>
         <Providers>
-          <div className="bg-primary max-md:py-2 px-2  md:h-9 w-full flex items-center justify-center text-white text-sm md:px-12">
-            <div className="max-w-screen-2xl flex w-full items-center justify-between md:flex-row flex-col gap-y-1 ">
-              <Link className="text-xs max-md:text-center" href={'https://maps.google.com'} target="_blank">Address: 680 Broadway, Suite No. 503, Paterson, NJ 07514</Link>
-              <div className="flex flex-row gap-x-1 items-center">
+          <div className="flex w-full items-center justify-center bg-primary px-2 text-sm text-white max-md:py-2 md:h-9 md:px-12">
+            <div className="flex w-full max-w-screen-2xl flex-col items-center justify-between gap-y-1 md:flex-row">
+              <Link
+                className="text-xs max-md:text-center"
+                href={"https://www.google.com/maps"}
+                target="_blank"
+              >
+                Address: 680 Broadway, Suite No. 503, Paterson, NJ 07514
+              </Link>
+              <div className="flex flex-row items-center gap-x-1">
                 <ImMobile size={25} className="text-[#E2C08E]" />
-                <Link className="text-xs max-md:text-center" href={'tel:9736535867'}>Call Us : (973) 653-5867</Link>
+                <Link
+                  className="text-xs max-md:text-center"
+                  href={"tel:9736535867"}
+                >
+                  Call Us : (973) 653-5867
+                </Link>
               </div>
             </div>
           </div>
-          <div className="fixed top-6 md:top-14 w-full z-[999]">
+          <div className="fixed top-6 z-[999] w-full md:top-14">
             <NavBar />
           </div>
           {children}
-          <div className="fixed bottom-6 w-full z-[999]">
+          <div className="fixed bottom-6 z-[999] w-full">
             <BottomNavBar />
           </div>
         </Providers>

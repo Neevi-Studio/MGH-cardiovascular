@@ -10,7 +10,7 @@ type CardProps = {
 
 function Card({ icon, title, text, boldText }: CardProps) {
   return (
-    <div className="flex flex-col items-center justify-between gap-12 rounded-3xl bg-primary p-8 text-white xl:items-start">
+    <div className="flex flex-col items-center max-xl:text-center justify-between gap-12 rounded-3xl bg-primary p-8 text-white xl:items-start">
       <div className="content-center rounded-full bg-primary-50 p-3 align-middle">
         <Image src={`icons/${icon}`} width={33} height={33} alt="Heart icon" />
       </div>
@@ -58,13 +58,13 @@ function AboutUsSection() {
         <p className="text-center text-xl text-primary">
           About us
         </p>
-        <h2 className="text-3xl font-bold text-black">
+        <h2 className="text-3xl font-bold text-black max-xl:text-center">
           Unmatched Cardiology Expertise & Compassionate Care
         </h2>
         <p className="text-gray text-center text-xl">
           Welcome to MGH Cardiovascular Associates, where pioneering heart care
           meets
-          <span className="block">
+          <span className="block my-2">
             personalized treatment. Our practice is anchored in a commitment to
             excellence, providing
           </span>

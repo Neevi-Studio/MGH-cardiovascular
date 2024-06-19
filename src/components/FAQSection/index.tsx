@@ -2,7 +2,7 @@ import { Accordion, AccordionItem } from "@nextui-org/react";
 
 function FAQSection() {
   return (
-    <section className="custom-container w-full flex-col justify-center">
+    <section id="faq" className="custom-container w-full flex-col justify-center">
       <div className="flex flex-col gap-y-2">
         <p className="text-center text-lg text-primary-50 md:text-2xl">
           Frequently Asked Questions (FAQ)

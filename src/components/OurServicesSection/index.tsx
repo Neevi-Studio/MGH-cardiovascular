@@ -87,7 +87,7 @@ function OurServicesSection() {
         onClick={() => scrollToElementById("request-appointment")}
         color="primary"
         size="lg"
-        className="text-lg max-xl:mt-4 w-fit mx-auto"
+        className="text-lg max-xl:mt-2 w-fit mx-auto"
       >
         Request Appointment
       </Button>

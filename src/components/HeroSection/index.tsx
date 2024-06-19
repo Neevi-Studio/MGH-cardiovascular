@@ -38,7 +38,15 @@ function HeroSection() {
           </Button>
         </div>
       </div>
-      <div className="overflow-hidden rounded-3xl bg-primary xl:h-full xl:w-full">
+      <div
+        style={{
+          backgroundImage: "url('/images/hero-bg.svg')",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        className="overflow-hidden rounded-3xl bg-primary xl:h-full xl:w-full"
+      >
         <Image
           src="/images/hero-section.svg"
           alt="Smiling womans"

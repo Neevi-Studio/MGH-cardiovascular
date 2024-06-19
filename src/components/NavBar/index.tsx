@@ -10,7 +10,7 @@ import Image from "next/image";
 import React from "react";
 import { BiHome } from "react-icons/bi";
 import { BsPeople } from "react-icons/bs";
-import { FaQuestionCircle, } from "react-icons/fa";
+import { FaQuestionCircle } from "react-icons/fa";
 import { MdOutlineHomeRepairService, MdOutlineReviews } from "react-icons/md";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -47,7 +47,8 @@ function NavBarItemLink({
 export const scrollToElementById = (id: string) => {
   const element = document.getElementById(id);
   if (element) {
-    const y = element.getBoundingClientRect().top + window.scrollY - fixedScrollOffset;
+    const y =
+      element.getBoundingClientRect().top + window.scrollY - fixedScrollOffset;
     window.scrollTo({ top: y, behavior: "smooth" });
   }
 };
@@ -98,7 +99,7 @@ function NavBar() {
   return (
     <Navbar
       maxWidth="full"
-      className="mx-auto  w-[95%] md:w-[90%] max-w-screen-xl rounded-lg border border-primary bg-white/90 py-2  "
+      className="mx-auto w-[95%] max-w-screen-xl rounded-lg border border-primary bg-white/90 py-2 md:w-[90%]"
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
       style={{ height: "60px" }}
@@ -113,12 +114,17 @@ function NavBar() {
           spy={true}
           smooth={true}
           offset={-fixedScrollOffset}
-          className="z-10 flex items-center justify-center hover:cursor-pointer "
+          className="z-10 flex items-center justify-center hover:cursor-pointer"
         >
-          <NavbarBrand className="max-md:justify-end relative size-32 md:size-52 -ml-4 ">
-            <Image src={"/logo.avif"} fill className="object-contain" alt="brand" />
+          <NavbarBrand className="relative -ml-4 max-md:justify-end">
+            <Image
+              src={"/logo.avif"}
+              width={225}
+              height={41}
+              className="object-contain"
+              alt="brand"
+            />
           </NavbarBrand>
-
         </ScrollLink>
       </NavbarContent>
       <NavbarContent className="hidden gap-8 xl:flex" justify="center">
@@ -128,11 +134,11 @@ function NavBar() {
           </NavbarItem>
         ))}
       </NavbarContent>
-      <NavbarContent className="  -mr-4" justify="end">
+      <NavbarContent className="-mr-4" justify="end">
         <Button
-        size='sm'
+          size="sm"
           color="primary"
-          className="rounded-lg md:px-6 text-sm  text-white"
+          className="rounded-lg text-sm text-white md:px-6"
         >
           <ScrollLink
             to={"request-appointment"}
@@ -147,85 +153,64 @@ function NavBar() {
           </ScrollLink>
         </Button>
       </NavbarContent>
-      {/* <NavbarMenu className="px-[10%] pt-14 mt-14">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem
-            key={`${item}-${index}`}
-            className="text-gray-100 font-medium text-xs"
-          >
-            <NavBarItemLink
-              setIsMenuOpen={setIsMenuOpen}
-              item={item}
-              isMobileMenuItem
-            />
-          </NavbarMenuItem>
-        ))}
-        <NavbarMenuItem>
-          <Button
-            onClick={() => {
-              // scrollToElementById("request-appointment");
-              setIsMenuOpen(false);
-            }}
-            color="primary"
-            className="mt-2 w-full rounded-xl px-2 text-sm font-bold text-white"
-          >
-            <ScrollLink
-              onClick={() => setIsMenuOpen(false)}
-              to={"request-appointment"}
-              activeClass="font-bold text-gray-medium"
-              spy={true}
-              smooth={true}
-              offset={-fixedScrollOffset}
-              className="z-10 flex items-center justify-center hover:cursor-pointer"
-            >
-              Request Appointment
-            </ScrollLink>
-          </Button>
-        </NavbarMenuItem>
-      </NavbarMenu> */}
     </Navbar>
   );
 }
 
 export default NavBar;
 
+function BottomNavBarLink({
+  linkId,
+  icon,
+  title,
+}: {
+  linkId: string;
+  icon: React.ReactNode;
+  title: string;
+}) {
+  return (
+    <Button
+      key={linkId + title}
+      onClick={() => scrollToElementById(linkId)}
+      radius="none"
+      className="flex h-full flex-1 flex-col items-center justify-center bg-transparent text-white"
+    >
+      {icon}
+      <p className="-mt-1 text-xs">{title}</p>
+    </Button>
+  );
+}
 
+const bottomNavarIconClasses = ` text-sm md:text-xl `;
 
 export function BottomNavBar() {
-
   return (
-    <div className="flex flex-row w-[98%] md:w-[90%] mx-auto divide-x divide-[#D9C5A7] h-14 bg-[#DCD1BF] border  py-1  rounded-xl border-[#D9C5A7] xl:hidden" >
-      <Button
-        radius="none"
-        className="flex flex-1 items-center justify-center flex-col text-white h-full bg-transparent " >
-        <BiHome className="text-sm md:text-xl " />
-        <p className="-mt-1 text-xs" >Home</p>
-      </Button>
-      <Button
-        radius="none"
-        className="flex flex-1 items-center justify-center flex-col text-white h-full bg-transparent" >
-        <BsPeople className="text-sm md:text-xl " />
-        <p className="-mt-1 text-xs" >About Us</p>
-      </Button>
-      <Button
-        radius="none"
-        className="flex flex-1 items-center justify-center flex-col text-white h-full bg-transparent " >
-        <MdOutlineHomeRepairService className="text-sm md:text-xl " />
-        <p className="-mt-1 text-xs" >Our Services</p>
-      </Button>
-      <Button
-        radius="none"
-        className="flex flex-1 items-center justify-center flex-col text-white h-full bg-transparent " >
-        <MdOutlineReviews className="text-sm md:text-xl " />
-        <p className="-mt-1 text-xs" >Testmonials</p>
-      </Button>
-      <Button
-        radius="none"
-        className="flex flex-1 flex-col text-white h-full bg-transparent max-md:hidden" >
-        <FaQuestionCircle className="text-sm md:text-xl " />
-        <p className="-mt-1 text-xs" >FAQ</p>
-      </Button>
-
+    <div className="mx-auto flex h-14 w-[98%] flex-row divide-x divide-[#D9C5A7] rounded-xl border border-[#D9C5A7] bg-[#DCD1BF] py-1 md:w-[90%] xl:hidden">
+      <BottomNavBarLink
+        icon={<BiHome className={bottomNavarIconClasses} />}
+        linkId="home"
+        title="Home"
+      />
+      <BottomNavBarLink
+        icon={<BsPeople className={bottomNavarIconClasses} />}
+        linkId="about-us"
+        title="About Us"
+      />
+      <BottomNavBarLink
+        icon={<MdOutlineHomeRepairService className={bottomNavarIconClasses} />}
+        linkId="our-services"
+        title="Our Services"
+      />
+      <BottomNavBarLink
+        icon={<MdOutlineReviews className={bottomNavarIconClasses} />}
+        linkId="testimonials"
+        title="Testimonials"
+      />
+      <BottomNavBarLink
+        icon={<FaQuestionCircle className={bottomNavarIconClasses} />}
+        linkId="faq"
+        title="FAQ"
+      />
     </div>
-  )
+  );
 }

@@ -14,20 +14,20 @@ function BookAnAppointmentFormSection() {
       <div className={`${mainStyles}`}>
         <section
           id="request-appointment"
-          className={`custom-container xl:!gap-4 !gap-4 mx-auto w-full flex-col text-primary`}
+          className={`custom-container xl:!gap-4 !gap-4 max-xl:!px-0 mx-auto w-full flex-col text-primary`}
         >
           <div className="flex-col text-center">
             <h2 className="text-center mb-5 text-3xl font-bold xl:text-5xl">
               Schedule Your Visit
             </h2>
-            <p className="flex flex-col items-center gap-y-1 text-center text-lg font-bold xl:text-xl">
+            <p className="flex flex-col items-center gap-y-1 text-center font-bold xl:text-xl">
               <span>Book an appointment with our </span>
               <span>experts and take the first step </span>
               <span>towards better heart health.</span>
             </p>
           </div>
           <form className="flex w-full flex-col gap-1.5">
-            <div className="flex w-full gap-4">
+            <div className="flex max-xl:flex-col w-full xl:gap-4 gap-1.5">
               <div className="flex w-full flex-col">
                 <label htmlFor="first-name" className="ml-2 text-left">
                   First Name*
@@ -55,7 +55,7 @@ function BookAnAppointmentFormSection() {
               </div>
             </div>
 
-            <div className="flex w-full gap-4">
+            <div className="flex max-xl:flex-col w-full xl:gap-4 gap-1.5">
               <div className="flex w-full flex-col">
                 <label htmlFor="phone-number" className="ml-2 text-left">
                   Phone Number*

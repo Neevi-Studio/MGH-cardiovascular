@@ -7,7 +7,7 @@ import { scrollToElementById } from "../NavBar";
 function ControlYourHeartHealthVideoSection() {
   return (
     <section className="custom-container relative aspect-video rounded-3xl bg-black">
-      <div className="inner-container mt-auto flex-col text-white">
+      <div className="inner-container max-xl:mx-auto mt-auto flex-col text-white">
         <h2 className="text-2xl xl:text-4xl">
           Take Control of Your Heart Health
         </h2>
