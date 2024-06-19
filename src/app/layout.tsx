@@ -1,10 +1,11 @@
+import AOSInit from "@/components/AOSInit";
+import NavBar, { BottomNavBar } from "@/components/NavBar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import { Providers } from "./providers";
-import NavBar, { BottomNavBar } from "@/components/NavBar";
 import Link from "next/link";
 import { ImMobile } from "react-icons/im";
+import "./globals.css";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <AOSInit />
       <body className={`${inter.className} bg-white`}>
         <Providers>
           <div className="flex w-full items-center justify-center bg-primary px-2 text-sm text-white max-md:py-2 md:h-9 md:px-12">

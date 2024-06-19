@@ -2,8 +2,11 @@ import { Accordion, AccordionItem } from "@nextui-org/react";
 
 function FAQSection() {
   return (
-    <section id="faq" className="custom-container w-full flex-col justify-center">
-      <div className="flex flex-col gap-y-2">
+    <section
+      id="faq"
+      className="custom-container w-full flex-col justify-center"
+    >
+      <div data-aos="fade-up" className="flex flex-col gap-y-2">
         <p className="text-center text-lg text-primary-50 md:text-2xl">
           Frequently Asked Questions (FAQ)
         </p>
@@ -12,14 +15,17 @@ function FAQSection() {
           cardiology services and patient care.
         </p>
       </div>
-      <Accordion className="mx-auto rounded-xl bg-gray-light px-8">
+      <Accordion
+        defaultExpandedKeys={"1"}
+        className="mx-auto rounded-xl bg-gray-light px-8"
+      >
         <AccordionItem
           key="1"
-          className="max-md:text-center"
+          className="pb-5 text-gray max-md:text-center"
           aria-label="Accordion 1"
           title={
             <p className="py-1 text-primary max-md:text-center">
-              How do i book an appointment?
+              How do I book an appointment?
             </p>
           }
         >
@@ -28,7 +34,7 @@ function FAQSection() {
         </AccordionItem>
         <AccordionItem
           key="2"
-          className="max-md:text-center"
+          className="pb-5 text-gray max-md:text-center"
           aria-label="Accordion 2"
           title={
             <p className="py-1 text-primary max-md:text-center">
@@ -41,7 +47,7 @@ function FAQSection() {
         </AccordionItem>
         <AccordionItem
           key="3"
-          className="max-md:text-center"
+          className="pb-5 text-gray max-md:text-center"
           aria-label="Accordion 3"
           title={
             <p className="py-1 text-primary max-md:text-center">
@@ -54,7 +60,7 @@ function FAQSection() {
         </AccordionItem>
         <AccordionItem
           key="4"
-          className="max-md:text-center"
+          className="pb-5 text-gray max-md:text-center"
           aria-label="Accordion 4"
           title={
             <p className="py-1 text-primary max-md:text-center">

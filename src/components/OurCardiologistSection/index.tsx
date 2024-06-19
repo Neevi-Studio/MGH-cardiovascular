@@ -24,11 +24,15 @@ function OurCardiologistSection() {
         className="inner-container relative z-[2] w-full flex-col items-end rounded-3xl px-10 py-8 max-md:items-center md:py-16"
       >
         <div className="flex flex-col-reverse gap-y-6 max-md:w-full max-md:items-center md:flex-col">
-          <Link href={"https://www.linkedin.com/"} target="_blank">
+          <Link
+            data-aos="fade-up"
+            href={"https://www.linkedin.com/"}
+            target="_blank"
+          >
             <Button
               size="lg"
               color="primary"
-              className="flex flex-1 items-center max-xl:mx-auto whitespace-break-spaces py-2 leading-5"
+              className="flex flex-1 items-center whitespace-break-spaces py-2 leading-5 max-xl:mx-auto"
             >
               <RiLinkedinFill className="text-primary-50" size={30} />
               {"View her Profile\nat Linkedin"}
@@ -43,8 +47,12 @@ function OurCardiologistSection() {
           />
         </div>
 
-        <div className="flex w-full flex-col items-center justify-between gap-4 xl:gap-6 md:flex-row">
-          <Link href={"https://www.google.com/maps"} className="w-full" target="_blank">
+        <div className="flex w-full flex-col items-center justify-between gap-4 md:flex-row xl:gap-6">
+          <Link
+            href={"https://www.google.com/maps"}
+            className="w-full"
+            target="_blank"
+          >
             <Button
               size="lg"
               color="primary"
@@ -58,15 +66,15 @@ function OurCardiologistSection() {
           </Link>
 
           <Link href={"tel:9736535867"} className="w-full">
-          <Button
-            size="lg"
-            color="primary"
-            className="flex flex-1 items-center max-xl:mx-auto whitespace-break-spaces ml-auto py-2 leading-5"
-          >
-            <ImMobile className="text-primary-50" size={30} />
-            (973) 653-5867
-          </Button>
-            </Link>
+            <Button
+              size="lg"
+              color="primary"
+              className="ml-auto flex flex-1 items-center whitespace-break-spaces py-2 leading-5 max-xl:mx-auto"
+            >
+              <ImMobile className="text-primary-50" size={30} />
+              (973) 653-5867
+            </Button>
+          </Link>
         </div>
       </div>
 

@@ -20,7 +20,7 @@ function ControlYourHeartHealthVideoSection() {
           onClick={() => scrollToElementById("request-appointment")}
           color="primary"
           size="lg"
-          className="w-fit max-xl:mx-auto"
+          className="w-fit max-xl:mx-auto border-primary-50 border-2"
         >
           Request Appointment
         </Button>

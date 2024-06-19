@@ -6,11 +6,16 @@ type CardProps = {
   title: string;
   boldText: string;
   text: string;
+  index: number;
 };
 
-function Card({ icon, title, text, boldText }: CardProps) {
+function Card({ icon, title, text, boldText, index }: CardProps) {
   return (
-    <div className="flex flex-col items-center max-xl:text-center justify-between gap-12 rounded-3xl bg-primary p-8 text-white xl:items-start">
+    <div
+      data-aos="fade-up"
+      data-aos-delay={150 * index}
+      className="flex flex-col items-center justify-between gap-12 rounded-3xl bg-primary p-8 text-white max-xl:text-center xl:items-start"
+    >
       <div className="content-center rounded-full bg-primary-50 p-3 align-middle">
         <Image src={`icons/${icon}`} width={33} height={33} alt="Heart icon" />
       </div>
@@ -22,12 +27,8 @@ function Card({ icon, title, text, boldText }: CardProps) {
         </p>
       </div>
     </div>
-  ); 
-} 
-
-
-
-
+  );
+}
 
 const cardsData = [
   {
@@ -53,18 +54,20 @@ const cardsData = [
 
 function AboutUsSection() {
   return (
-    <section id="about-us" className="custom-container flex-col md:px-12">
+    <section
+      data-aos="fade-up"
+      id="about-us"
+      className="custom-container flex-col md:px-12"
+    >
       <div className="inner-container flex-col">
-        <p className="text-center text-xl text-primary">
-          About us
-        </p>
+        <p className="text-center text-xl text-primary">About us</p>
         <h2 className="text-3xl font-bold text-black max-xl:text-center">
           Unmatched Cardiology Expertise & Compassionate Care
         </h2>
-        <p className="text-gray text-center text-xl">
+        <p className="text-center text-xl text-gray">
           Welcome to MGH Cardiovascular Associates, where pioneering heart care
           meets
-          <span className="block my-2">
+          <span className="my-2 block">
             personalized treatment. Our practice is anchored in a commitment to
             excellence, providing
           </span>
@@ -74,12 +77,9 @@ function AboutUsSection() {
         </p>
       </div>
 
-      <div className=" grid grid-cols-1 xl:grid-cols-3 gap-5 ">
+      <div className="grid grid-cols-1 gap-5 xl:grid-cols-3">
         {cardsData.map((card, index) => (
-          <Card
-            key={index}
-            {...card}
-          />
+          <Card key={index} {...card} index={index} />
         ))}
       </div>
     </section>

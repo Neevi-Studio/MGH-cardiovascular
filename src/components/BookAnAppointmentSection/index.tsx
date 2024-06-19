@@ -52,8 +52,11 @@ function BookAnAppointmentSection() {
           environment. Your journey to a brighter, healthier smile begins here.
         </p>
       </div>
-      <div className="flex h-full w-full max-xl:flex-col max-xl:gap-8">
-        <div className="inner-container my-auto h-fit flex-col rounded-3xl bg-primary-50 px-8 py-10 xl:w-[70%]">
+      <div className="flex h-full w-full max-xl:flex-col max-xl:gap-8 z-[1]">
+        <div
+          data-aos="fade-left"
+          className="inner-container -z-[1] my-auto h-fit flex-col rounded-3xl bg-primary-50 px-8 py-10 xl:w-[70%]"
+        >
           <h3 className="text-lg">Our Working Program</h3>
           <div className="flex w-full flex-col gap-3">
             {workingProgramData.map((data, index) => (
@@ -66,7 +69,7 @@ function BookAnAppointmentSection() {
           width={574}
           height={720}
           alt="bg"
-          className="w-full rounded-3xl"
+          className="w-full rounded-3xl z-[1]"
         />
       </div>
     </section>

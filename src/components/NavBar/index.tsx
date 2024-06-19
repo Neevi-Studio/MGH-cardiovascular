@@ -53,32 +53,32 @@ export const scrollToElementById = (id: string) => {
   }
 };
 
+const menuItems = [
+  {
+    name: "Home",
+    link: "home",
+  },
+  {
+    name: "About Us",
+    link: "about-us",
+  },
+  {
+    name: "Our Services",
+    link: "our-services",
+  },
+
+  {
+    name: "Testimonials",
+    link: "testimonials",
+  },
+  {
+    name: "FAQ",
+    link: "faq",
+  },
+];
+
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
-  const menuItems = [
-    {
-      name: "Home",
-      link: "home",
-    },
-    {
-      name: "About Us",
-      link: "about-us",
-    },
-    {
-      name: "Our Services",
-      link: "our-services",
-    },
-
-    {
-      name: "Testimonials",
-      link: "testimonials",
-    },
-    {
-      name: "FAQ",
-      link: "faq",
-    },
-  ];
 
   const [_, setIsScrolled] = React.useState(false);
 
@@ -98,6 +98,7 @@ function NavBar() {
   }, []);
   return (
     <Navbar
+      data-aos="fade-right"
       maxWidth="full"
       className="mx-auto w-[95%] max-w-screen-xl rounded-lg border border-primary bg-white/90 py-2 md:w-[90%]"
       onMenuOpenChange={setIsMenuOpen}
@@ -185,7 +186,10 @@ const bottomNavarIconClasses = ` text-sm md:text-xl `;
 
 export function BottomNavBar() {
   return (
-    <div className="mx-auto flex h-14 w-[98%] flex-row divide-x divide-[#D9C5A7] rounded-xl border border-[#D9C5A7] bg-[#DCD1BF] py-1 md:w-[90%] xl:hidden">
+    <div
+      data-aos="fade-right"
+      className="mx-auto flex h-14 w-[98%] flex-row divide-x divide-[#D9C5A7] rounded-xl border border-[#D9C5A7] bg-[#DCD1BF] py-1 md:w-[90%] xl:hidden"
+    >
       <BottomNavBarLink
         icon={<BiHome className={bottomNavarIconClasses} />}
         linkId="home"

@@ -2,12 +2,14 @@ import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import { BsTwitter } from "react-icons/bs";
 import { RiInstagramFill, RiLinkedinFill } from "react-icons/ri";
+import { scrollToElementById } from "../NavBar";
 
 function Footer() {
   return (
     <footer className="flex flex-col items-center justify-center bg-[#FBFBFB] pb-8">
       <div className="relative size-60">
         <Image
+          data-aos="fade-up"
           src="container.svg"
           fill
           className="object-contain"
@@ -16,30 +18,35 @@ function Footer() {
       </div>
       <div className="flex flex-row items-center gap-x-3 max-md:flex-wrap max-md:justify-center max-md:gap-y-4 max-md:px-4">
         <Button
+          onClick={() => scrollToElementById("home")}
           size="sm"
           className="border border-transparent bg-transparent font-normal text-gray-100 transition-all duration-300 hover:border-primary hover:font-bold hover:text-primary md:w-[50px]"
         >
           Home
         </Button>
         <Button
+          onClick={() => scrollToElementById("about-us")}
           size="sm"
           className="border border-transparent bg-transparent font-normal text-gray-100 transition-all duration-300 hover:border-primary hover:font-bold hover:text-primary md:w-[90px]"
         >
           About us
         </Button>
         <Button
+          onClick={() => scrollToElementById("our-services")}
           size="sm"
           className="border border-transparent bg-transparent font-normal text-gray-100 transition-all duration-300 hover:border-primary hover:font-semibold hover:text-primary md:w-[90px]"
         >
           Our services
         </Button>
         <Button
+          onClick={() => scrollToElementById("testimonials")}
           size="sm"
           className="border border-transparent bg-transparent font-normal text-gray-100 transition-all duration-300 hover:border-primary hover:font-semibold hover:text-primary md:w-[90px]"
         >
           Testimonials
         </Button>
         <Button
+          onClick={() => scrollToElementById("request-appointment")}
           size="sm"
           className="border border-transparent bg-transparent font-normal text-gray-100 transition-all duration-300 hover:border-primary hover:font-semibold hover:text-primary md:w-[90px]"
         >
