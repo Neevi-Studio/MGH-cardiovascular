@@ -22,8 +22,12 @@ function Card({ icon, title, text, boldText }: CardProps) {
         </p>
       </div>
     </div>
-  );
-}
+  ); 
+} 
+
+
+
+
 
 const cardsData = [
   {
