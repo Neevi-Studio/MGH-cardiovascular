@@ -9,7 +9,7 @@ type CardProps = {
 
 function Card({ text, image, nameAndRole }: CardProps) {
   return (
-    <div className="testimonials-slide flex h-[17.5rem] flex-col items-center justify-center gap-8 rounded-2xl border border-gray-medium bg-white p-10 text-black shadow-md">
+    <div className="testimonials-slide min-w-[350px]  flex h-[17.5rem] flex-col items-center justify-center gap-8 rounded-2xl border border-gray-medium bg-white p-10 text-black shadow-md">
       <p>{text}</p>
 
       <div className="flex items-center mr-auto gap-2">

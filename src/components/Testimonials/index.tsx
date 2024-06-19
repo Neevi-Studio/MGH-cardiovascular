@@ -72,7 +72,7 @@ const cardsData = {
 
 function Testimonials() {
   return (
-    <section id="testimonials" className="custom-container flex-col">
+    <section id="testimonials" className="custom-container flex-col max-w-screen overflow-x-hidden">
       <div className="inner-container flex-col">
         <p className="text-center text-xl text-primary">Testimonial</p>
         <h2 className="text-center text-3xl font-bold text-black">

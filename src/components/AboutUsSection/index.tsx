@@ -10,7 +10,7 @@ type CardProps = {
 
 function Card({ icon, title, text, boldText }: CardProps) {
   return (
-    <div className="flex flex-col items-center justify-between gap-12 rounded-2xl bg-primary p-8 text-white xl:items-start">
+    <div className="flex flex-col items-center justify-between gap-12 rounded-3xl bg-primary p-8 text-white xl:items-start">
       <div className="content-center rounded-full bg-primary-50 p-3 align-middle">
         <Image src={`icons/${icon}`} width={33} height={33} alt="Heart icon" />
       </div>
@@ -49,10 +49,10 @@ const cardsData = [
 
 function AboutUsSection() {
   return (
-    <section id="about-us" className="custom-container flex-col">
+    <section id="about-us" className="custom-container flex-col md:px-12">
       <div className="inner-container flex-col">
         <p className="text-center text-xl text-primary">
-          About <span className="block">us</span>
+          About us
         </p>
         <h2 className="text-3xl font-bold text-black">
           Unmatched Cardiology Expertise & Compassionate Care
@@ -70,7 +70,7 @@ function AboutUsSection() {
         </p>
       </div>
 
-      <div className="inner-container !grid grid-cols-1 xl:grid-cols-3">
+      <div className=" grid grid-cols-1 xl:grid-cols-3 gap-5 ">
         {cardsData.map((card, index) => (
           <Card
             key={index}

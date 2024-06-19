@@ -13,17 +13,17 @@ type ServiceProps = {
 function Service({ icon, title, text }: ServiceProps) {
   return (
     <div className="flex items-center gap-3 max-xl:flex-col">
-      <div className="mb-auto shrink-0 content-center rounded-2xl border-1 border-primary px-6 py-3 align-middle">
+      <div className="mb-auto shrink-0 content-center rounded-lg border-1 border-primary px-6 py-3 align-middle">
         <Image
           src={`icons/services/${icon}`}
           alt="Service icon"
-          width={37}
-          height={37}
+          width={45}
+          height={45}
         />
       </div>
       <div className="mb-auto flex flex-col items-start gap-2">
-        <p className="text-2xl text-primary max-xl:mx-auto">{title}</p>
-        <p className="text-lg text-[#00000080] max-xl:mx-auto">{text}</p>
+        <p className="text-xl text-primary max-xl:mx-auto">{title}</p>
+        <p className=" text-[#00000080] max-xl:mx-auto">{text}</p>
       </div>
     </div>
   );
@@ -64,13 +64,13 @@ const ServicesData = [
 
 function OurServicesSection() {
   return (
-    <section id="our-services" className="custom-container flex-col">
+    <section id="our-services" className="max-w-screen-xl mx-auto flex  gap-y-20 flex-col">
       <div className="inner-container flex-col">
         <p className="text-center text-xl text-primary">
-          Our <span className="block">Services</span>
+          Our Services
         </p>
         <h2 className="mx-auto text-3xl font-bold text-black">
-          Heart Care<span className="block">Reimagined</span>
+          Heart Care Reimagined
         </h2>
         <p className="text-center text-xl text-gray">
           Expert care across a spectrum of heart health needs, delivered with
@@ -78,7 +78,7 @@ function OurServicesSection() {
         </p>
       </div>
 
-      <div className="inner-container !grid grid-cols-1 max-xl:!gap-y-8 lg:grid-cols-2 xl:grid-cols-3 xl:!gap-x-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-16 max-xl:gap-y-8 px-14">
         {ServicesData.map((data, index) => (
           <Service key={index} {...data} />
         ))}
@@ -87,7 +87,7 @@ function OurServicesSection() {
         onClick={() => scrollToElementById("request-appointment")}
         color="primary"
         size="lg"
-        className="text-lg max-xl:mt-4"
+        className="text-lg max-xl:mt-4 w-fit mx-auto"
       >
         Request Appointment
       </Button>
