@@ -187,8 +187,7 @@ const bottomNavarIconClasses = ` text-sm md:text-xl `;
 export function BottomNavBar() {
   return (
     <div
-      data-aos="fade-right"
-      className="mx-auto flex h-14 w-[98%] flex-row divide-x divide-[#D9C5A7] rounded-xl border border-[#D9C5A7] bg-[#DCD1BF] py-1 md:w-[90%] xl:hidden"
+      className="mx-auto flex h-14 w-[98%] flex-row divide-x divide-[#D9C5A7] rounded-xl border border-[#D9C5A7] bg-[#DCD1BF] py-1 md:w-[90%] xl:hidden bg-opacity-90"
     >
       <BottomNavBarLink
         icon={<BiHome className={bottomNavarIconClasses} />}
