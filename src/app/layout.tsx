@@ -1,13 +1,12 @@
 import AOSInit from "@/components/AOSInit";
 import NavBar, { BottomNavBar } from "@/components/NavBar";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Be_Vietnam_Pro, Inter, Lato } from "next/font/google";
+import localFont from "next/font/local";
 import Link from "next/link";
 import { ImMobile } from "react-icons/im";
 import "./globals.css";
 import { Providers } from "./providers";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MGH Cardiovascular Associates",
@@ -22,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AOSInit />
-      <body className={`${inter.className} bg-white`}>
+      <body
+        className={`${inter.variable} ${beVietnamPro.variable} ${lato.variable} ${hlad.className} bg-white`}
+      >
         <Providers>
           <div className="flex w-full items-center justify-center bg-primary px-2 text-sm text-white max-md:py-2 md:h-9 md:px-12">
             <div className="flex w-full max-w-screen-2xl flex-col items-center justify-between gap-y-1 md:flex-row">
@@ -56,3 +57,53 @@ export default function RootLayout({
     </html>
   );
 }
+
+//
+//
+// USed Fonts - Default is hlad
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+const lato = Lato({
+  subsets: ["latin"],
+  variable: "--font-lato",
+  weight: ["100", "300", "400", "700"],
+});
+
+const beVietnamPro = Be_Vietnam_Pro({
+  subsets: ["latin"],
+  variable: "--font-be-vietnam-pro",
+  weight: ["100", "300", "400", "500","600", "700"],
+});
+
+const hlad = localFont({
+  src: [
+    {
+      path: "../../public/fonts/hlad/hlad-thin.otf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/hlad/hlad-light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/hlad/hlad-regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/hlad/hlad-semi-bold.otf",
+      weight: "600",
+      style: "normal",
+    },
+
+    {
+      path: "../../public/fonts/hlad/hlad-bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-hlad",
+});

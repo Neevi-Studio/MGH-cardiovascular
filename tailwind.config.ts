@@ -10,6 +10,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        hlad: ["var(--font-hlad)"],
+        inter: ["var(--font-inter)"],
+        "be-vietnam-pro": ["var(--font-be-vietnam-pro)"],
+        lato: ["var(--font-lato)"],
+      },
       colors: {
         primary: "#A38457",
         "primary-50": "#C9AC7F",
