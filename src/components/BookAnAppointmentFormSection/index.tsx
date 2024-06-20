@@ -1,8 +1,9 @@
-import { mainStyles } from "@/app/page";
 import React from "react";
 import Form from "./Form";
 
 function BookAnAppointmentFormSection() {
+  const mainStyles = ` mx-auto flex max-xl:text-center max-w-screen-2xl flex-col gap-10 lg:p-10 p-5 xl:gap-20 xl:p-20 `;
+
   return (
     <div className={`rounded-3xl border border-primary`}>
       <div className={`${mainStyles}`}>
