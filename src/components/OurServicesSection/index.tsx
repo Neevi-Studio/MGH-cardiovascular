@@ -23,7 +23,7 @@ function Service({ icon, title, text }: ServiceProps) {
       </div>
       <div className="mb-auto flex flex-col items-start gap-2">
         <p className="text-xl text-primary max-xl:mx-auto">{title}</p>
-        <p className=" text-[#00000080] max-xl:mx-auto">{text}</p>
+        <p className=" text-[#00000080] max-xl:mx-auto font-lato">{text}</p>
       </div>
     </div>
   );
@@ -72,7 +72,7 @@ function OurServicesSection() {
         <h2 className="mx-auto text-3xl font-bold text-black">
           Heart Care Reimagined
         </h2>
-        <p className="text-center text-xl text-gray">
+        <p className="text-center text-xl text-gray font-lato">
           Expert care across a spectrum of heart health needs, delivered with
           precision and compassion.
         </p>

@@ -47,18 +47,18 @@ function BookAnAppointmentSection() {
     <section className="custom-container flex-col overflow-hidden rounded-3xl bg-primary text-white xl:!gap-0">
       <div className="inner-container mr-auto flex-col xl:w-[40%]">
         <h2 className="text-xl font-bold xl:text-3xl">Book an Appointment</h2>
-        <p className="text-lg font-light">
+        <p className="font-lato text-lg font-light">
           Schedule your visit now for personalized care in a comfortable
           environment. Your journey to a brighter, healthier smile begins here.
         </p>
       </div>
-      <div className="flex h-full w-full max-xl:flex-col max-xl:gap-8 z-[1]">
+      <div className="z-[1] flex h-full w-full max-xl:flex-col max-xl:gap-8">
         <div
           data-aos="fade-left"
           className="inner-container -z-[1] my-auto h-fit flex-col rounded-3xl bg-primary-50 px-8 py-10 xl:w-[70%]"
         >
           <h3 className="text-lg">Our Working Program</h3>
-          <div className="flex w-full flex-col gap-3">
+          <div className="flex w-full flex-col gap-3 font-inter">
             {workingProgramData.map((data, index) => (
               <WorkingProgramCard key={index} {...data} />
             ))}
@@ -69,7 +69,7 @@ function BookAnAppointmentSection() {
           width={574}
           height={720}
           alt="bg"
-          className="w-full rounded-3xl z-[1]"
+          className="z-[1] w-full rounded-3xl"
         />
       </div>
     </section>

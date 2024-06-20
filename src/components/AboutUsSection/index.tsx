@@ -14,7 +14,7 @@ function Card({ icon, title, text, boldText, index }: CardProps) {
     <div
       data-aos="fade-up"
       data-aos-delay={150 * index}
-      className="flex flex-col items-center justify-between gap-12 rounded-3xl bg-primary p-8 text-white max-xl:text-center xl:items-start"
+      className="flex flex-col items-center font-lato justify-between gap-12 rounded-3xl bg-primary p-8 text-white max-xl:text-center xl:items-start"
     >
       <div className="content-center rounded-full bg-primary-50 p-3 align-middle">
         <Image src={`icons/${icon}`} width={33} height={33} alt="Heart icon" />
@@ -64,7 +64,7 @@ function AboutUsSection() {
         <h2 className="text-3xl font-bold text-black max-xl:text-center">
           Unmatched Cardiology Expertise & Compassionate Care
         </h2>
-        <p className="text-center text-xl text-gray">
+        <p className="text-center text-xl text-gray font-lato">
           Welcome to MGH Cardiovascular Associates, where pioneering heart care
           meets
           <span className="my-2 block">

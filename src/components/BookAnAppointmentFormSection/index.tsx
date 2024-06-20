@@ -15,7 +15,7 @@ function BookAnAppointmentFormSection() {
             <h2 className="mb-5 text-center text-3xl font-bold xl:text-5xl">
               Schedule Your Visit
             </h2>
-            <p className="flex flex-col items-center gap-y-1 text-center font-bold xl:text-xl">
+            <p className="flex flex-col items-center gap-y-1 text-center font-bold xl:text-xl font-lato">
               <span>Book an appointment with our </span>
               <span>experts and take the first step </span>
               <span>towards better heart health.</span>

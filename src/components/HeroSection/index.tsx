@@ -15,7 +15,7 @@ function HeroSection() {
         <p
           data-aos="fade-up"
           data-aos-delay="150"
-          className="text-xl text-gray"
+          className="text-xl text-gray font-lato"
         >
           Explore expert cardiology services tailored for optimal heart health,
           all delivered by our leading specialists. Experience the difference
@@ -30,7 +30,7 @@ function HeroSection() {
             onClick={() => scrollToElementById("our-services")}
             size="lg"
             color="primary"
-            className="font-medium"
+            className="font-medium font-be-vietnam-pro"
             variant="bordered"
           >
             Our Services
@@ -39,6 +39,7 @@ function HeroSection() {
             onClick={() => scrollToElementById("our-cardiologist")}
             size="lg"
             color="primary"
+            className="font-amiko"
           >
             Meet Our Cardiologist{" "}
             <MdOutlineArrowOutward size={30} className="rotate-90" />

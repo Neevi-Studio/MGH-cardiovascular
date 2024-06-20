@@ -8,7 +8,7 @@ function InsuranceAndPaymentOptions() {
         <h2 className="text-xl font-bold xl:text-3xl">
           Insurance and Payment Options
         </h2>
-        <p className="text-lg">
+        <p className="text-lg font-lato">
           We strive to make your care as accessible as possible. MGH
           Cardiovascular Associates accepts most major insurance plans, ensuring
           you can receive the quality cardiology services you need without

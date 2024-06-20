@@ -1,7 +1,7 @@
 import AOSInit from "@/components/AOSInit";
 import NavBar, { BottomNavBar } from "@/components/NavBar";
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro, Inter, Lato } from "next/font/google";
+import { Be_Vietnam_Pro, Inter, Lato, Amiko } from "next/font/google";
 import localFont from "next/font/local";
 import Link from "next/link";
 import { ImMobile } from "react-icons/im";
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <AOSInit />
       <body
-        className={`${inter.variable} ${beVietnamPro.variable} ${lato.variable} ${hlad.className} bg-white`}
+        className={`${inter.variable} ${beVietnamPro.variable} ${amiko.variable} ${lato.variable} ${hlad.className} bg-white`}
       >
         <Providers>
           <div className="flex w-full items-center justify-center bg-primary px-2 text-sm text-white max-md:py-2 md:h-9 md:px-12">
@@ -74,6 +74,12 @@ const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin"],
   variable: "--font-be-vietnam-pro",
   weight: ["100", "300", "400", "500","600", "700"],
+});
+
+const amiko = Amiko({
+  subsets: ["latin"],
+  variable: "--font-amiko",
+  weight: [ "400","600", "700"],
 });
 
 const hlad = localFont({

@@ -15,6 +15,7 @@ const config: Config = {
         inter: ["var(--font-inter)"],
         "be-vietnam-pro": ["var(--font-be-vietnam-pro)"],
         lato: ["var(--font-lato)"],
+        amiko: ["var(--font-amiko)"],
       },
       colors: {
         primary: "#A38457",

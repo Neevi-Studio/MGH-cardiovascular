@@ -16,7 +16,7 @@ function ControlYourHeartHealthVideoSection() {
         <h2 className="text-2xl xl:text-4xl">
           Take Control of Your Heart Health
         </h2>
-        <p className="text-xl">
+        <p className="text-xl font-lato">
           Discover how regular cardiovascular check-ups can enhance your life
           quality and
           <span className="block">longevity.</span>
@@ -25,7 +25,7 @@ function ControlYourHeartHealthVideoSection() {
           onClick={() => scrollToElementById("request-appointment")}
           color="primary"
           size="lg"
-          className="w-fit max-xl:mx-auto border-primary-50 border-2"
+          className="w-fit max-xl:mx-auto border-primary-50 border-2 font-amiko"
         >
           Request Appointment
         </Button>

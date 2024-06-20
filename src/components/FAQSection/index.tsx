@@ -1,5 +1,28 @@
+"use client";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
+const accordionItemsData = [
+  {
+    itemKey: "1",
+    title: "How do I book an appointment?",
+    text: "You can schedule an appointment by filling out our online form, calling our office, or visiting us in person.",
+  },
+  {
+    itemKey: "2",
+    title: "What insurance do you accept?",
+    text: "We accept most major insurance plans. Please contact our office for a specific list of providers",
+  },
+  {
+    itemKey: "3",
+    title: "What should i bring to my first visit?",
+    text: "Please bring your identification, insurance information, and any relevant medical records or test results.",
+  },
+  {
+    itemKey: "4",
+    title: "Are there any preparation required before a cardiology exam?",
+    text: "Specific instructions may vary based on the exam. Generally, you might be asked to avoid caffeine, fast for a few hours, or stop certain medications. We will provide all necessary instructions when you book your appointment.",
+  },
+];
 function FAQSection() {
   return (
     <section
@@ -19,60 +42,20 @@ function FAQSection() {
         defaultExpandedKeys={"1"}
         className="mx-auto rounded-xl bg-gray-light px-8"
       >
-        <AccordionItem
-          key="1"
-          className="pb-5 text-gray max-md:text-center"
-          aria-label="Accordion 1"
-          title={
-            <p className="py-1 text-primary max-md:text-center">
-              How do I book an appointment?
-            </p>
-          }
-        >
-          You can schedule an appointment by filling out our online form,
-          calling our office, or visiting us in person.
-        </AccordionItem>
-        <AccordionItem
-          key="2"
-          className="pb-5 text-gray max-md:text-center"
-          aria-label="Accordion 2"
-          title={
-            <p className="py-1 text-primary max-md:text-center">
-              What insurance do you accept?
-            </p>
-          }
-        >
-          We accept most major insurance plans. Please contact our office for a
-          specific list of providers
-        </AccordionItem>
-        <AccordionItem
-          key="3"
-          className="pb-5 text-gray max-md:text-center"
-          aria-label="Accordion 3"
-          title={
-            <p className="py-1 text-primary max-md:text-center">
-              What should i bring to my first visit?
-            </p>
-          }
-        >
-          Please bring your identification, insurance information, and any
-          relevant medical records or test results.
-        </AccordionItem>
-        <AccordionItem
-          key="4"
-          className="pb-5 text-gray max-md:text-center"
-          aria-label="Accordion 4"
-          title={
-            <p className="py-1 text-primary max-md:text-center">
-              Are there any preparation required before a cardiology exam?
-            </p>
-          }
-        >
-          Specific instructions may vary based on the exam. Generally, you might
-          be asked to avoid caffeine, fast for a few hours, or stop certain
-          medications. We will provide all necessary instructions when you book
-          your appointment.
-        </AccordionItem>
+        {accordionItemsData.map((data) => (
+          <AccordionItem
+            key={data.itemKey}
+            className="pb-5 text-gray max-md:text-center"
+            aria-label="Accordion 2"
+            title={
+              <p className={`font-lato py-1 text-primary max-md:text-center`}>
+                {data.title}
+              </p>
+            }
+          >
+            <span className="font-be-vietnam-pro">{data.text}</span>
+          </AccordionItem>
+        ))}
       </Accordion>
     </section>
   );
