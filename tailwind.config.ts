@@ -16,6 +16,7 @@ const config: Config = {
         "be-vietnam-pro": ["var(--font-be-vietnam-pro)"],
         lato: ["var(--font-lato)"],
         amiko: ["var(--font-amiko)"],
+        "liberation-sans": ["var(--font-liberation-sans)"],
       },
       colors: {
         primary: "#A38457",

@@ -9,6 +9,9 @@ const nextUiInputClassNames = {
   input: "placeholder:text-primary text-medium p-4",
 };
 
+const mainInputsContainerStyles = ` flex w-full flex-col font-liberation-sans`
+const inputsContainerStyles = ` ${mainInputsContainerStyles} gap-1.5 xl:flex-row xl:gap-4 ` 
+
 function Form() {
   const [mailResponseModal, setMailResponseModal] = useState(false);
 
@@ -85,10 +88,10 @@ function Form() {
       <form
         ref={formRef}
         onSubmit={sendEmail}
-        className="flex w-full flex-col gap-3"
+        className="flex w-full flex-col gap-3 "
       >
-        <div className="flex w-full gap-1.5 max-xl:flex-col xl:gap-4">
-          <div className="flex w-full flex-col">
+        <div className={`${inputsContainerStyles}`}>
+          <div className={`${mainInputsContainerStyles}`}>
             <label htmlFor="firstname" className="ml-2 text-left">
               First Name*
             </label>
@@ -103,7 +106,7 @@ function Form() {
             />
           </div>
 
-          <div className="flex w-full flex-col">
+          <div className={`${mainInputsContainerStyles}`}>
             <label htmlFor="lastname" className="ml-2 text-left">
               Last Name*
             </label>
@@ -118,8 +121,8 @@ function Form() {
           </div>
         </div>
 
-        <div className="flex w-full gap-1.5 max-xl:flex-col xl:gap-4">
-          <div className="flex w-full flex-col">
+        <div className={`${inputsContainerStyles}`}>
+          <div className={`${mainInputsContainerStyles}`}>
             <label htmlFor="phone" className="ml-2 text-left">
               Phone Number*
             </label>
@@ -135,7 +138,7 @@ function Form() {
             />
           </div>
 
-          <div className="flex w-full flex-col">
+          <div className={`${mainInputsContainerStyles}`}>
             <label htmlFor="email" className="ml-2 text-left">
               Email*
             </label>
@@ -152,8 +155,8 @@ function Form() {
           </div>
         </div>
 
-        <div className="flex w-full gap-1.5 max-xl:flex-col xl:gap-4">
-          <div className="flex w-full flex-col">
+        <div className={`${inputsContainerStyles}`}>
+          <div className={`${mainInputsContainerStyles}`}>
             <label htmlFor="time" className="ml-2 text-left">
               Date*
             </label>
@@ -169,7 +172,7 @@ function Form() {
             />
           </div>
 
-          <div className="flex w-full flex-col">
+          <div className={`${mainInputsContainerStyles}`}>
             <label htmlFor="time" className="ml-2 text-left">
               Time*
             </label>
@@ -185,7 +188,7 @@ function Form() {
             />
           </div>
         </div>
-        <div className="flex w-full flex-col">
+        <div className={`${mainInputsContainerStyles}`}>
           <label htmlFor="insurance" className="ml-2 text-left">
             Insurance Provider ( if you have Insurance )
           </label>
@@ -199,7 +202,7 @@ function Form() {
           />
         </div>
 
-        <div className="flex w-full flex-col">
+        <div className={`${mainInputsContainerStyles}`}>
           <label htmlFor="policy" className="ml-2 text-left">
             Policy Number:
           </label>
@@ -213,7 +216,7 @@ function Form() {
           />
         </div>
 
-        <div className="flex w-full flex-col">
+        <div className={`${mainInputsContainerStyles}`}>
           <label htmlFor="message" className="ml-2 text-left">
             Message
           </label>
@@ -226,7 +229,7 @@ function Form() {
           />
         </div>
 
-        <Button className="mt-2" isLoading={isLoading} type="submit" size="lg" color="primary">
+        <Button className="mt-2 !font-hlad" isLoading={isLoading} type="submit" size="lg" color="primary">
           Submit
         </Button>
       </form>

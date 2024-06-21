@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <AOSInit />
       <body
-        className={`${inter.variable} ${beVietnamPro.variable} ${amiko.variable} ${lato.variable} ${hlad.className} bg-white`}
+        className={`${inter.variable} ${liberationSans.variable} ${beVietnamPro.variable} ${amiko.variable} ${lato.variable} ${hlad.className} bg-white`}
       >
         <Providers>
           <div className="flex w-full items-center justify-center bg-primary px-2 text-sm text-white max-md:py-2 md:h-9 md:px-12">
@@ -45,7 +45,7 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-          <div className=" z-[999] w-full mt-6 -mb-2">
+          <div className="z-[999] -mb-2 mt-6 w-full">
             <NavBar />
           </div>
           {children}
@@ -73,13 +73,13 @@ const lato = Lato({
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin"],
   variable: "--font-be-vietnam-pro",
-  weight: ["100", "300", "400", "500","600", "700"],
+  weight: ["100", "300", "400", "500", "600", "700"],
 });
 
 const amiko = Amiko({
   subsets: ["latin"],
   variable: "--font-amiko",
-  weight: [ "400","600", "700"],
+  weight: ["400", "600", "700"],
 });
 
 const hlad = localFont({
@@ -112,4 +112,20 @@ const hlad = localFont({
     },
   ],
   variable: "--font-hlad",
+});
+
+const liberationSans = localFont({
+  src: [
+    {
+      path: "../../public/fonts/liberation-sans/liberation-sans-regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/liberation-sans/liberation-sans-bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-liberation-sans",
 });
