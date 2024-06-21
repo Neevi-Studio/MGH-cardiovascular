@@ -16,7 +16,7 @@ const mainStyles = ` mx-auto flex max-xl:text-center max-w-screen-2xl flex-col g
 export default function Home() {
   return (
     <main>
-      <div className={mainStyles + "mt-8"}>
+      <div className={mainStyles}>
         <HeroSection />
         <ControlYourHeartHealthVideoSection />
       </div>

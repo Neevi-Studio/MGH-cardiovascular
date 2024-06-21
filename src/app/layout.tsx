@@ -45,7 +45,7 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-          <div className="fixed top-6 z-[999] w-full md:top-14">
+          <div className=" z-[999] w-full mt-6 -mb-2">
             <NavBar />
           </div>
           {children}
