@@ -9,7 +9,6 @@ function Footer() {
     <footer className="flex flex-col items-center justify-center bg-[#FBFBFB] pb-8">
       <div className="relative size-60">
         <Image
-          data-aos="fade-up"
           src="/container.svg"
           fill
           className="object-contain"
