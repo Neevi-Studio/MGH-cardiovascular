@@ -14,11 +14,11 @@ function Card({ text, image, nameAndRole }: CardProps) {
 
       <div className="flex items-center mr-auto gap-2">
         <Image
-          src={`images/testimonials/${image}`}
+          src={`${image}`}
           width={42}
           height={42}
           alt={image}
-          // className="rounded-full"
+          className="rounded-full"
         />
         <h3 className="">{nameAndRole}</h3>
       </div>
