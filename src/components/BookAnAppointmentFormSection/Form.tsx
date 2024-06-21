@@ -12,6 +12,25 @@ const nextUiInputClassNames = {
 function Form() {
   const [mailResponseModal, setMailResponseModal] = useState(false);
 
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    phone: "",
+    email: "",
+    date: "",
+    time: "",
+    insurance: "",
+    policy: "",
+    message: "",
+  });
+
+  function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  }
+
   const [isLoading, setIsLoading] = useState(false);
 
   const [isError, setIsError] = useState(false);
@@ -28,8 +47,8 @@ function Form() {
     setIsLoading(true);
     if (formRef.current) {
       await emailJs
-        .sendForm("service_id", "template_id", formRef.current, {
-          publicKey: "public_key",
+        .sendForm("service_s4cuscd", "template_mngnxzq", formRef.current, {
+          publicKey: "qZxx95IJKSXrjw3jx",
         })
         .then(
           () => {
@@ -66,16 +85,18 @@ function Form() {
       <form
         ref={formRef}
         onSubmit={sendEmail}
-        className="flex w-full flex-col gap-1.5"
+        className="flex w-full flex-col gap-3"
       >
         <div className="flex w-full gap-1.5 max-xl:flex-col xl:gap-4">
           <div className="flex w-full flex-col">
-            <label htmlFor="first-name" className="ml-2 text-left">
+            <label htmlFor="firstname" className="ml-2 text-left">
               First Name*
             </label>
             <Input
-              id="first-name"
+              id="firstname"
+              name="firstname"
               placeholder="Jane"
+              onChange={handleInputChange}
               color="primary"
               classNames={nextUiInputClassNames}
               required
@@ -83,11 +104,12 @@ function Form() {
           </div>
 
           <div className="flex w-full flex-col">
-            <label htmlFor="last-name" className="ml-2 text-left">
+            <label htmlFor="lastname" className="ml-2 text-left">
               Last Name*
             </label>
             <Input
-              id="last-name"
+              id="lastname"
+              name="lastname"
               placeholder="Doe"
               color="primary"
               classNames={nextUiInputClassNames}
@@ -98,13 +120,16 @@ function Form() {
 
         <div className="flex w-full gap-1.5 max-xl:flex-col xl:gap-4">
           <div className="flex w-full flex-col">
-            <label htmlFor="phone-number" className="ml-2 text-left">
+            <label htmlFor="phone" className="ml-2 text-left">
               Phone Number*
             </label>
             <Input
-              id="phone-number"
-              placeholder="Jane"
+              id="phone"
+              name="phone"
+              placeholder='(123) 456-7890'
               color="primary"
+              type="tel"
+              onChange={handleInputChange}
               classNames={nextUiInputClassNames}
               required
             />
@@ -116,6 +141,9 @@ function Form() {
             </label>
             <Input
               id="email"
+              name="email"
+              type="email"
+              onChange={handleInputChange}
               placeholder="jane@example.com"
               color="primary"
               classNames={nextUiInputClassNames}
@@ -123,18 +151,39 @@ function Form() {
             />
           </div>
         </div>
-        <div className="flex w-full flex-col">
-          <label htmlFor="time" className="ml-2 text-left">
-            Time*
-          </label>
-          <Input
-            id="time"
-            placeholder="--:-- --"
-            color="primary"
-            type="time"
-            classNames={nextUiInputClassNames}
-            required
-          />
+
+        <div className="flex w-full gap-1.5 max-xl:flex-col xl:gap-4">
+          <div className="flex w-full flex-col">
+            <label htmlFor="time" className="ml-2 text-left">
+              Date*
+            </label>
+            <Input
+              id="date"
+              name="date"
+              placeholder="--:-- --"
+              color="primary"
+              onChange={handleInputChange}
+              type="date"
+              classNames={nextUiInputClassNames}
+              required
+            />
+          </div>
+
+          <div className="flex w-full flex-col">
+            <label htmlFor="time" className="ml-2 text-left">
+              Time*
+            </label>
+            <Input
+              id="time"
+              name="time"
+              placeholder="--:-- --"
+              onChange={handleInputChange}
+              color="primary"
+              type="time"
+              classNames={nextUiInputClassNames}
+              required
+            />
+          </div>
         </div>
         <div className="flex w-full flex-col">
           <label htmlFor="insurance" className="ml-2 text-left">
@@ -142,6 +191,8 @@ function Form() {
           </label>
           <Input
             id="insurance"
+            name="insurance"
+            onChange={handleInputChange}
             placeholder="Insurance Provider"
             color="primary"
             classNames={nextUiInputClassNames}
@@ -154,7 +205,9 @@ function Form() {
           </label>
           <Input
             id="policy"
-            placeholder="Policy Number:"
+            name="policy"
+            placeholder="Policy Number"
+            onChange={handleInputChange}
             color="primary"
             classNames={nextUiInputClassNames}
           />
@@ -166,16 +219,14 @@ function Form() {
           </label>
           <Textarea
             id="message"
+            name="message"
             color="primary"
+            onChange={handleInputChange}
             classNames={nextUiInputClassNames}
           />
         </div>
-        <div className="flex w-full">
-          <Checkbox id="check" />
-          <label htmlFor="check">Subscribe to our newsletter</label>
-        </div>
 
-        <Button isLoading={isLoading} type="submit" size="lg" color="primary">
+        <Button className="mt-2" isLoading={isLoading} type="submit" size="lg" color="primary">
           Submit
         </Button>
       </form>
