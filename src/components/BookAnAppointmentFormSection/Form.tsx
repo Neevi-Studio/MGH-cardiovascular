@@ -1,5 +1,5 @@
 import emailJs from "@emailjs/browser";
-import { Button, Checkbox, Input, Textarea } from "@nextui-org/react";
+import { Button, Input, Textarea } from "@nextui-org/react";
 import React, { useRef, useState } from "react";
 import SendMailResponseModal from "./SendMailResponseModal";
 
@@ -57,7 +57,7 @@ function Form() {
           () => {
             setMailResponseModalData({
               title: "Thanks for contacting us",
-              body: "You message send successful",
+              body: "You message was sent successfully. We will get back to you soon.",
             });
             setMailResponseModal(true);
             formRef?.current?.reset();
@@ -140,7 +140,7 @@ function Form() {
 
           <div className={`${mainInputsContainerStyles}`}>
             <label htmlFor="email" className="ml-2 text-left">
-              Email*
+              Email
             </label>
             <Input
               id="email"
@@ -150,7 +150,7 @@ function Form() {
               placeholder="jane@example.com"
               color="primary"
               classNames={nextUiInputClassNames}
-              required
+
             />
           </div>
         </div>
