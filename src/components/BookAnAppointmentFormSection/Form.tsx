@@ -20,8 +20,6 @@ function Form() {
     lastname: "",
     phone: "",
     email: "",
-    date: "",
-    time: "",
     insurance: "",
     policy: "",
     message: "",
@@ -155,39 +153,8 @@ function Form() {
           </div>
         </div>
 
-        <div className={`${inputsContainerStyles}`}>
-          <div className={`${mainInputsContainerStyles}`}>
-            <label htmlFor="time" className="ml-2 text-left">
-              Date*
-            </label>
-            <Input
-              id="date"
-              name="date"
-              placeholder="--:-- --"
-              color="primary"
-              onChange={handleInputChange}
-              type="date"
-              classNames={nextUiInputClassNames}
-              required
-            />
-          </div>
 
-          <div className={`${mainInputsContainerStyles}`}>
-            <label htmlFor="time" className="ml-2 text-left">
-              Time*
-            </label>
-            <Input
-              id="time"
-              name="time"
-              placeholder="--:-- --"
-              onChange={handleInputChange}
-              color="primary"
-              type="time"
-              classNames={nextUiInputClassNames}
-              required
-            />
-          </div>
-        </div>
+
         <div className={`${mainInputsContainerStyles}`}>
           <label htmlFor="insurance" className="ml-2 text-left">
             Insurance Provider ( if you have Insurance )
