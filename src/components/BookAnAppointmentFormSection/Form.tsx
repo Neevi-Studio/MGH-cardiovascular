@@ -55,7 +55,7 @@ function Form() {
           () => {
             setMailResponseModalData({
               title: "Thanks for contacting us",
-              body: "You message was sent successfully. We will get back to you soon.",
+              body: "Your message was sent successfully. We will get back to you soon.",
             });
             setMailResponseModal(true);
             formRef?.current?.reset();
