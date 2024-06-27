@@ -35,8 +35,8 @@ function NavBarItemLink({
       offset={-fixedScrollOffset}
       className={
         isMobileMenuItem
-          ? "w-full"
-          : "z-10 flex items-center justify-center hover:cursor-pointer"
+          ? "w-full  hover:font-semibold transition-all "
+          : "z-10 flex items-center  hover:font-bold transition-all  justify-center hover:cursor-pointer"
       }
     >
       {item?.name}
@@ -139,7 +139,7 @@ function NavBar() {
         <Button
           size="sm"
           color="primary"
-          className="rounded-lg text-sm text-white md:px-6"
+          className="rounded-lg  hover:font-bold transition-all  text-sm text-white md:px-6"
         >
           <ScrollLink
             to={"request-appointment"}
@@ -174,7 +174,7 @@ function BottomNavBarLink({
       key={linkId + title}
       onClick={() => scrollToElementById(linkId)}
       radius="none"
-      className="flex h-full flex-1 flex-col items-center justify-center bg-transparent text-white"
+      className="flex h-full flex-1 hover:font-bold transition-all flex-col items-center justify-center bg-transparent text-white"
     >
       {icon}
       <p className="-mt-1 text-xs">{title}</p>

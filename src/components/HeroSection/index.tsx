@@ -24,7 +24,7 @@ function HeroSection() {
         <div
           data-aos="fade-up"
           data-aos-delay="150"
-          className="mx-auto flex items-center gap-3 max-xl:flex-col-reverse"
+          className="mx-auto flex items-center justify-between w-full gap-3 max-xl:flex-col-reverse"
         >
           <Button
             onClick={() => scrollToElementById("our-services")}
@@ -80,7 +80,7 @@ function HeroSection() {
           width={320}
           height={74.32}
           alt="Comprehensive Cardiac Solutions"
-          className="absolute bottom-16 left-6"
+          className="absolute top-24 left-5"
         />
       </div>
     </section>
