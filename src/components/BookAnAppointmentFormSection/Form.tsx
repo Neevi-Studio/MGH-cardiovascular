@@ -42,6 +42,7 @@ function Form() {
   });
 
   const formRef = useRef<HTMLFormElement>(null);
+// gmail: s70836218@gmail.com
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
