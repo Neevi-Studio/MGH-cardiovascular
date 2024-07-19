@@ -41,8 +41,8 @@ function HeroSection() {
             color="primary"
             className="font-amiko"
           >
-            Meet Our Cardiologist{" "}
-            <MdOutlineArrowOutward size={30} className="rotate-90" />
+            Meet Our Cardiologist
+            {/* <MdOutlineArrowOutward size={30} className="rotate-90" /> */}
           </Button>
         </div>
       </div>

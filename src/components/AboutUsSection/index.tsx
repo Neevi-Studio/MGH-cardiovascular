@@ -19,7 +19,7 @@ function Card({ icon, title, text, boldText, index }: CardProps) {
       <div className="content-center rounded-full bg-primary-50 p-3 align-middle">
         <Image src={`icons/${icon}`} width={33} height={33} alt="Heart icon" />
       </div>
-      <div className="space-y-2">
+      <div className="flex flex-col justify-between h-full gap-2">
         <h3 className="text-2xl">{title}</h3>
         <p className="text-white/50">
           <span className="block font-bold">{boldText}</span>

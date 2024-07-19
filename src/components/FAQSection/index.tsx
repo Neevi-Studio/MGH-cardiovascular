@@ -14,13 +14,13 @@ const accordionItemsData = [
   },
   {
     itemKey: "3",
-    title: "What should i bring to my first visit?",
+    title: "What should I bring to my first visit?",
     text: "Please bring your identification, insurance information, and any relevant medical records or test results.",
   },
   {
     itemKey: "4",
-    title: "Are there any preparation required before a cardiology exam?",
-    text: "Specific instructions may vary based on the exam. Generally, you might be asked to avoid caffeine, fast for a few hours, or stop certain medications. We will provide all necessary instructions when you book your appointment.",
+    title: "How Do I Prepare for a Cardiac Test?",
+    text: "Specific instructions may vary based on the exam. Generally, you may be asked to avoid caffeine, fast for a few hours, and/or stop certain medications. We will provide all necessary instructions when you book your appoin",
   },
 ];
 function FAQSection() {
@@ -48,7 +48,7 @@ function FAQSection() {
             className="pb-5 text-gray max-md:text-center"
             aria-label="Accordion 2"
             title={
-              <p className={`font-lato py-1 text-primary max-md:text-center`}>
+              <p className={`py-1 font-lato text-primary max-md:text-center`}>
                 {data.title}
               </p>
             }

@@ -59,7 +59,7 @@ function Testimonials() {
   return (
     <section id="testimonials" className="custom-container flex-col max-w-screen overflow-x-hidden">
       <div className="inner-container flex-col">
-        <p className="text-center text-xl text-primary">Testimonial</p>
+        <p className="text-center text-xl text-primary">Testimonials</p>
         <h2 className="text-center text-3xl font-bold text-black">
           What our Patients say about<span className="block">us?</span>
         </h2>

@@ -9,7 +9,7 @@ function WorkingProgramCard({ day, time }: { day: string; time: string }) {
   );
 }
 
-const repeatedTime = "08:00 AM - 06:00 PM";
+const repeatedTime = "09:00 AM - 05:00 PM";
 
 const workingProgramData = [
   {
@@ -34,7 +34,7 @@ const workingProgramData = [
   },
   {
     day: "Saturday",
-    time: "08:00 AM - 02:00 PM",
+    time: "Closed",
   },
   {
     day: "Sunday",
@@ -57,7 +57,7 @@ function BookAnAppointmentSection() {
           data-aos="fade-left"
           className="inner-container -z-[1] my-auto h-fit flex-col rounded-3xl bg-primary-50 px-8 py-10 xl:w-[70%]"
         >
-          <h3 className="text-lg">Our Working Program</h3>
+          <h3 className="text-lg">Our Schedule</h3>
           <div className="flex w-full flex-col gap-3 font-inter">
             {workingProgramData.map((data, index) => (
               <WorkingProgramCard key={index} {...data} />

@@ -27,6 +27,10 @@ export default function Home() {
 
       <div className="w-full bg-gray-light">
         <div className={mainStyles}>
+          <h2 className="inline-block bg-gradient-to-r from-gray-dark to-gray-100 bg-clip-text text-center text-xl font-bold text-transparent drop-shadow-xl xl:text-3xl">
+            We offer comprehensive in-office cardiac testing to accurately
+            diagnose and manage heart conditions.
+          </h2>
           <OurServicesSection />
         </div>
       </div>

@@ -38,7 +38,7 @@ const ServicesData = [
   {
     icon: "cardiology-consultations.svg",
     title: "General Cardiology Consultations",
-    text: "Visualize trends and monitor key performances",
+    text: "We offer thorough consultations to address a wide range of cardiac concerns, ensuring tailored treatment plans for each patient.",
   },
   {
     icon: "vein-treatments.svg",
@@ -48,12 +48,12 @@ const ServicesData = [
   {
     icon: "in-office-cardiology.svg",
     title: "In-Office Cardiology Workups",
-    text: "Assign tasks, set priorities, and track progress effortlessly",
+    text: "Our in-office cardiology workups provide detailed assessments to diagnose and manage heart conditions effectively.",
   },
   {
     icon: "women-cardiac.svg",
     title: "Women's Cardiac Health",
-    text: "Visualize trends and monitor key performances",
+    text: "Specializing in women's cardiac health, we focus on the unique needs and challenges of heart health in women.",
   },
   {
     icon: "preventative-cardiology.svg",

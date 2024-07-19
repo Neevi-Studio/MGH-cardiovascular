@@ -32,7 +32,7 @@ function OurCardiologistSection() {
             <Button
               size="lg"
               color="primary"
-              className="flex flex-1 items-center whitespace-break-spaces py-2 leading-5 max-xl:mx-auto font-lato"
+              className="flex flex-1 items-center whitespace-break-spaces py-2 font-lato leading-5 max-xl:mx-auto"
             >
               <RiLinkedinFill className="text-primary-50" size={30} />
               {"View her Profile\nat Linkedin"}
@@ -56,11 +56,11 @@ function OurCardiologistSection() {
             <Button
               size="lg"
               color="primary"
-              className="flex h-fit flex-1 flex-row gap-x-1 py-2 max-xl:mx-auto font-lato"
+              className="flex h-fit flex-1 flex-row gap-x-1 py-2 font-lato max-xl:mx-auto"
             >
               <CiLocationOn className="text-primary-50" size={30} />
               <p className="whitespace-break-spaces text-left text-xs">
-                {"680 Broadway, Suite No. 503, Paterson, NJ 07514"}
+                {"680 Broadway, Suite 503, Paterson, NJ 07514"}
               </p>
             </Button>
           </Link>
@@ -69,7 +69,7 @@ function OurCardiologistSection() {
             <Button
               size="lg"
               color="primary"
-              className="ml-auto flex flex-1 items-center whitespace-break-spaces py-2 leading-5 max-xl:mx-auto font-lato"
+              className="ml-auto flex flex-1 items-center whitespace-break-spaces py-2 font-lato leading-5 max-xl:mx-auto"
             >
               <ImMobile className="text-primary-50" size={30} />
               (973) 653-5867
@@ -80,8 +80,10 @@ function OurCardiologistSection() {
 
       <div className="inner-container flex-col xl:w-full">
         <h1 className="text-primary">Meet Our Cardiologist</h1>
-        <p className="text-2xl text-black xl:text-4xl">Mirette Habib, MD</p>
-        <p className="font-light text-gray font-lato">
+        <p className="text-2xl text-black xl:text-4xl">
+          Mirette Habib, MD FACC
+        </p>
+        <p className="font-lato font-light text-gray">
           Dr. Mirette Habib is a distinguished interventional cardiologist with
           extensive experience in treating complex cardiovascular conditions.
           Board- certified and skilled in the latest advancements in cardiology,
@@ -91,7 +93,7 @@ function OurCardiologistSection() {
           personalized and effective cardiac
           <span className="block">care at MGH Cardiovascular Associates.</span>
         </p>
-        <div className="flex items-center justify-between gap-8 text-lg max-xl:mt-8 max-xl:flex-col xl:items-start xl:gap-16 font-inter">
+        <div className="flex items-center justify-between gap-8 font-inter text-lg max-xl:mt-8 max-xl:flex-col xl:items-start xl:gap-16">
           <div className="flex w-full flex-col gap-3 max-xl:items-center max-xl:text-center">
             <div className="w-fit rounded-xl bg-primary-50 p-3.5">
               <Image
@@ -103,8 +105,9 @@ function OurCardiologistSection() {
             </div>
             <p className="mt-2 text-primary">Years of Excellence</p>
             <p className="text-sm text-gray-dark">
-              Established in 2021, MGH has been providing top Cardiovascular
-              care.
+              Since our establishment in 2021, our office has been dedicated to
+              delivering top-tier, compassionate care. We ensure every patient
+              receives personalized and comprehensive medical attention.
             </p>
           </div>
 

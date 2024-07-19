@@ -33,7 +33,7 @@ export default function RootLayout({
                 href={"https://www.google.com/maps"}
                 target="_blank"
               >
-                Address: 680 Broadway, Suite No. 503, Paterson, NJ 07514
+                Address: 680 Broadway, Suite 503, Paterson, NJ 07514
               </Link>
               <div className="flex flex-row items-center gap-x-1">
                 <ImMobile size={25} className="text-[#E2C08E]" />
