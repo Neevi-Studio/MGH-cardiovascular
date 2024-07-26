@@ -81,7 +81,7 @@ function OurCardiologistSection() {
       <div className="inner-container flex-col xl:w-full">
         <h1 className="text-primary">Meet Our Cardiologist</h1>
         <p className="text-2xl text-black xl:text-4xl">
-          Mirette Habib, MD FACC
+          Mirette Habib, MD, FACC
         </p>
         <p className="font-lato font-light text-gray">
           Dr. Mirette Habib is a distinguished interventional cardiologist with

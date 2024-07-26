@@ -20,7 +20,7 @@ const accordionItemsData = [
   {
     itemKey: "4",
     title: "How Do I Prepare for a Cardiac Test?",
-    text: "Specific instructions may vary based on the exam. Generally, you may be asked to avoid caffeine, fast for a few hours, and/or stop certain medications. We will provide all necessary instructions when you book your appoin",
+    text: "Specific instructions may vary based on the exam. Generally, you may be asked to avoid caffeine, fast for a few hours, and/or stop certain medications. We will provide all necessary instructions when you book your appointment",
   },
 ];
 function FAQSection() {

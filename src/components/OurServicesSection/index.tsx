@@ -43,7 +43,7 @@ const ServicesData = [
   {
     icon: "vein-treatments.svg",
     title: "Vein Treatments",
-    text: "Customize workflows, add integrations, and adapt features",
+    text: "We offer minimally invasive solutions for varicose veins, providing both aesthetic improvement and relief from discomfort.",
   },
   {
     icon: "in-office-cardiology.svg",
@@ -58,7 +58,7 @@ const ServicesData = [
   {
     icon: "preventative-cardiology.svg",
     title: "Preventative cardiology",
-    text: "Customize workflows, add integrations, and adapt features",
+    text: "We provide personalized plans for early detection and management of heart disease, ensuring a heart-healthy lifestyle.",
   },
 ];
 
