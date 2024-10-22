@@ -1,4 +1,3 @@
-import Image from "next/image";
 import TestimonialsSlider from "./TestimonialsSlider";
 
 const cardsData = {

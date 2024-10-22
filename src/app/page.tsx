@@ -1,4 +1,4 @@
-"use client";
+
 import AboutUsSection from "@/components/AboutUsSection";
 import BookAnAppointmentFormSection from "@/components/BookAnAppointmentFormSection";
 import BookAnAppointmentSection from "@/components/BookAnAppointmentSection";

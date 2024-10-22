@@ -1,7 +1,7 @@
 import AOSInit from "@/components/AOSInit";
 import NavBar, { BottomNavBar } from "@/components/NavBar";
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro, Inter, Lato, Amiko } from "next/font/google";
+import { Amiko, Be_Vietnam_Pro, Inter, Lato } from "next/font/google";
 import localFont from "next/font/local";
 import Link from "next/link";
 import { ImMobile } from "react-icons/im";
@@ -9,9 +9,63 @@ import "./globals.css";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "MGH Cardiovascular Associates",
+  title: "MGH Cardiovascular Associates | Expert Heart Care & Cardiologists",
   description:
-    "MGH Cardio offers top-tier cardiovascular care with advanced technology and experienced cardiologists. We provide personalized treatments, preventive care, and cutting-edge diagnostics to help you maintain a healthy heart.",
+    "MGH Cardiovascular Associates offers advanced cardiovascular care, personalized heart treatments, and expert cardiologists. Specializing in heart disease prevention, cutting-edge diagnostics, and heart health management.",
+  keywords: [
+    "cardiovascular care",
+    "heart care specialists",
+    "cardiologists near me",
+    "heart disease prevention",
+    "advanced heart diagnostics",
+    "personalized heart treatment",
+    "cardiovascular treatments",
+    "heart health services",
+    "cardiovascular services",
+    "cardiac care",
+    "heart surgery",
+    "heart health management",
+    "cardiac diagnostics",
+    "heart disease treatment",
+    "heart care clinic",
+    "MGH Cardiovascular Associates",
+    "best heart doctors",
+    "heart disease prevention tips",
+    "heart health clinic",
+    "top cardiologists",
+  ],
+  openGraph: {
+    title: "MGH Cardiovascular Associates - Comprehensive Heart Care",
+    description:
+      "Trust MGH Cardiovascular Associates for advanced heart care. Our team of expert cardiologists provides personalized treatments, cutting-edge diagnostics, and heart disease prevention services.",
+    // url: "https://www.mghcardio.com", // Add prod url
+    images: [
+      {
+        url: "/heart-care.jpg", // I think it should be an absolute path from the prod url  OR Add metadataBase
+        width: 1200,
+        height: 630,
+        alt: "Heart care equipment and specialists",
+      },
+    ],
+    siteName: "MGH Cardiovascular Associates",
+  },
+  // metadataBase: new URL("https://www.mghcardio.com"), // Add Prod Url
+  twitter: {
+    card: "summary_large_image",
+    title: "Advanced Heart Care | MGH Cardiovascular Associates",
+    description:
+      "MGH Cardiovascular Associates offers expert cardiologists, advanced diagnostics, and personalized heart care treatments. Learn more about our cardiovascular services.",
+    images: [
+      {
+        url: "/heart-care.jpg", // I think it should be an absolute path from the prod url OR Add metadataBase
+        width: 800,
+        height: 418,
+        alt: "Heart care services by MGH Cardiovascular Associates",
+      },
+    ],
+  },
+  category: "Cardiovascular Care",
+  classification: "Cardiovascular Care",
 };
 
 export default function RootLayout({
