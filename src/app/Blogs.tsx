@@ -19,7 +19,7 @@ function Blogs() {
                     <div className="w-full flex  flex-col lg:w-2/5">
                         <div className="block lg:text-left text-center">
                             <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-5">Our latest <span className=" text-[#A38457]">blogs</span></h2>
-                            <p className="text-gray-900 mb-10  max-lg:max-w-xl max-lg:mx-auto">Stay informed with expert tips, insights, and updates on dental emergencies and preparedness, helping you stay ready for any situation.</p>
+                            <p className="text-gray-900 mb-10  max-lg:max-w-xl max-lg:mx-auto">Stay informed with expert tips, insights, and updates on heart health and cardiovascular disease prevention, helping you stay prepared and proactive in protecting your heart.</p>
                         </div>
                         <div className="flex items-center     gap-4 mb-4">
                             <button id="slider-button-left" className="swiper-button-prev group flex justify-center items-center border border-solid border-[#A38457] w-11 h-11 transition-all duration-500 rounded-full hover:bg-[#A38457]" data-carousel-prev>
