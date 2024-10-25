@@ -1,8 +1,5 @@
-"use client";
-import { Button } from "@nextui-org/react";
 import Image from "next/image";
-import React from "react";
-import { scrollToElementById } from "../NavBar";
+import RequestAppointmentClientBtn from "./RequestAppointmentClientBtn";
 
 type ServiceProps = {
   icon: string;
@@ -23,7 +20,7 @@ function Service({ icon, title, text }: ServiceProps) {
       </div>
       <div className="mb-auto flex flex-col items-start gap-2">
         <p className="text-xl text-primary max-xl:mx-auto">{title}</p>
-        <p className=" text-[#00000080] max-xl:mx-auto font-lato">{text}</p>
+        <p className="font-lato text-[#00000080] max-xl:mx-auto">{text}</p>
       </div>
     </div>
   );
@@ -64,33 +61,27 @@ const ServicesData = [
 
 function OurServicesSection() {
   return (
-    <section id="our-services" className="max-w-screen-xl mx-auto flex  gap-y-20 flex-col">
+    <section
+      id="our-services"
+      className="mx-auto flex max-w-screen-xl flex-col gap-y-20"
+    >
       <div className="inner-container flex-col">
-        <p className="text-center text-xl text-primary">
-          Our Services
-        </p>
+        <p className="text-center text-xl text-primary">Our Services</p>
         <h2 className="mx-auto text-3xl font-bold text-black">
           Heart Care Reimagined
         </h2>
-        <p className="text-center text-xl text-gray font-lato">
+        <p className="text-center font-lato text-xl text-gray">
           Expert care across a spectrum of heart health needs, delivered with
           precision and compassion.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-16 max-xl:gap-y-8 px-14">
+      <div className="grid grid-cols-1 px-14 max-xl:gap-y-8 lg:grid-cols-2 xl:grid-cols-3 xl:gap-16">
         {ServicesData.map((data, index) => (
           <Service key={index} {...data} />
         ))}
       </div>
-      <Button
-        onClick={() => scrollToElementById("request-appointment")}
-        color="primary"
-        size="lg"
-        className="text-lg max-xl:mt-2 w-fit mx-auto"
-      >
-        Request Appointment
-      </Button>
+      <RequestAppointmentClientBtn />
     </section>
   );
 }

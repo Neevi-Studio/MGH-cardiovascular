@@ -1,9 +1,5 @@
-"use client";
-
-import { Button } from "@nextui-org/react";
 import Image from "next/image";
-import { MdOutlineArrowOutward } from "react-icons/md";
-import { scrollToElementById } from "../NavBar";
+import HeroClientBtns from "./HeroClientBtns";
 
 function HeroSection() {
   return (
@@ -15,36 +11,13 @@ function HeroSection() {
         <p
           data-aos="fade-up"
           data-aos-delay="150"
-          className="text-xl text-gray font-lato"
+          className="font-lato text-xl text-gray"
         >
           Explore expert cardiology services tailored for optimal heart health,
           all delivered by our leading specialists. Experience the difference
           with MGH Cardiovascular Associates.
         </p>
-        <div
-          data-aos="fade-up"
-          data-aos-delay="150"
-          className="mx-auto flex items-center justify-between w-full gap-3 max-xl:flex-col-reverse"
-        >
-          <Button
-            onClick={() => scrollToElementById("our-services")}
-            size="lg"
-            color="primary"
-            className="font-medium font-be-vietnam-pro"
-            variant="bordered"
-          >
-            Our Services
-          </Button>
-          <Button
-            onClick={() => scrollToElementById("our-cardiologist")}
-            size="lg"
-            color="primary"
-            className="font-amiko"
-          >
-            Meet Our Cardiologist
-            {/* <MdOutlineArrowOutward size={30} className="rotate-90" /> */}
-          </Button>
-        </div>
+        <HeroClientBtns />
       </div>
       <div
         data-aos="fade-up"
@@ -60,7 +33,7 @@ function HeroSection() {
         <Image
           data-aos="fade-down"
           data-aos-delay="350"
-          src="images/immediate-appointments-hero.svg"
+          src="/images/immediate-appointments-hero.svg"
           width={320}
           height={74.32}
           alt="Immediate Appointments Available"
@@ -76,11 +49,11 @@ function HeroSection() {
         <Image
           data-aos="fade-up"
           data-aos-delay="350"
-          src="images/comprehensive-cardiac-hero.svg"
+          src="/images/comprehensive-cardiac-hero.svg"
           width={320}
           height={74.32}
           alt="Comprehensive Cardiac Solutions"
-          className="absolute top-24 left-5"
+          className="absolute left-5 top-24"
         />
       </div>
     </section>

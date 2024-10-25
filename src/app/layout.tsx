@@ -1,17 +1,72 @@
 import AOSInit from "@/components/AOSInit";
 import NavBar, { BottomNavBar } from "@/components/NavBar";
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro, Inter, Lato, Amiko } from "next/font/google";
+import { Amiko, Be_Vietnam_Pro, Inter, Lato } from "next/font/google";
 import localFont from "next/font/local";
 import Link from "next/link";
 import { ImMobile } from "react-icons/im";
 import "./globals.css";
 import { Providers } from "./providers";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export const metadata: Metadata = {
-  title: "MGH Cardiovascular Associates",
+  title: "MGH Cardiovascular Associates | Leading Heart Care & Top Cardiologists",
+  metadataBase: new URL("https://www.mghcardio.com"), 
   description:
-    "MGH Cardio offers top-tier cardiovascular care with advanced technology and experienced cardiologists. We provide personalized treatments, preventive care, and cutting-edge diagnostics to help you maintain a healthy heart.",
+    "MGH Cardiovascular Associates delivers world-class cardiovascular care with cutting-edge diagnostics, personalized treatment plans, and prevention strategies led by top cardiologists. Specializing in heart disease prevention, advanced cardiac diagnostics, and innovative treatments to support lifelong heart health.",
+  keywords: [
+    "cardiovascular care experts",
+    "top heart specialists",
+    "best cardiologists near me",
+    "heart disease prevention strategies",
+    "advanced cardiac diagnostics",
+    "personalized heart treatments",
+    "comprehensive cardiovascular services",
+    "heart health management",
+    "cardiac care specialists",
+    "cardiac surgery",
+    "preventive heart care",
+    "expert heart doctors",
+    "heart disease treatments",
+    "MGH heart specialists",
+    "leading cardiovascular clinic",
+    "cutting-edge heart diagnostics",
+    "heart health solutions",
+    "best cardiologists in MGH",
+    "advanced cardiovascular treatments",
+    "cardiac care solutions",
+  ],
+  openGraph: {
+    title: "MGH Cardiovascular Associates | Premier Heart Care",
+    description:
+      "At MGH Cardiovascular Associates, we offer the highest level of heart care. Our expert cardiologists provide personalized treatments, cutting-edge diagnostics, and comprehensive services for heart disease prevention and management.",
+    images: [
+      {
+        url: "/heart-care.jpg", 
+        width: 1200,
+        height: 630,
+        alt: "State-of-the-art heart care at MGH Cardiovascular Associates",
+      },
+    ],
+    siteName: "MGH Cardiovascular Associates",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Comprehensive Heart Care | MGH Cardiovascular Associates",
+    description:
+      "Discover expert heart care at MGH Cardiovascular Associates, offering personalized cardiovascular treatments, advanced diagnostics, and heart disease prevention. Learn more about our innovative services today.",
+    images: [
+      {
+        url: "/heart-care.jpg", 
+        width: 800,
+        height: 418,
+        alt: "Top cardiologists at MGH Cardiovascular Associates delivering exceptional care",
+      },
+    ],
+  },
+  category: "Advanced Cardiovascular Care",
+  classification: "Heart Health & Treatment",
 };
 
 export default function RootLayout({

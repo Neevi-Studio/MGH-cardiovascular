@@ -1,3 +1,5 @@
+"use client"
+
 import emailJs from "@emailjs/browser";
 import { Button, Input, Textarea } from "@nextui-org/react";
 import React, { useRef, useState } from "react";

@@ -7,6 +7,8 @@ import {
   NavbarItem,
 } from "@nextui-org/react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import { BiHome } from "react-icons/bi";
 import { BsPeople } from "react-icons/bs";
@@ -25,7 +27,8 @@ function NavBarItemLink({
   isMobileMenuItem?: boolean;
   setIsMenuOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  return (
+  const pathName = usePathname();
+  return pathName == "/" ? (
     <ScrollLink
       onClick={() => setIsMenuOpen && setIsMenuOpen(false)}
       to={item?.link}
@@ -35,12 +38,24 @@ function NavBarItemLink({
       offset={-fixedScrollOffset}
       className={
         isMobileMenuItem
-          ? "w-full  hover:font-semibold transition-all "
-          : "z-10 flex items-center  hover:font-bold transition-all  justify-center hover:cursor-pointer"
+          ? "w-full transition-all hover:font-semibold"
+          : "z-10 flex items-center justify-center transition-all hover:cursor-pointer hover:font-bold"
       }
     >
       {item?.name}
     </ScrollLink>
+  ) : (
+    <Link
+      onClick={() => setIsMenuOpen && setIsMenuOpen(false)}
+      href={`/#${item?.link}`}
+      className={
+        isMobileMenuItem
+          ? "w-full transition-all hover:font-semibold"
+          : "z-10 flex items-center justify-center transition-all hover:cursor-pointer hover:font-bold"
+      }
+    >
+      {item?.name}
+    </Link>
   );
 }
 
@@ -82,6 +97,8 @@ function NavBar() {
 
   const [_, setIsScrolled] = React.useState(false);
 
+  const pathName = usePathname();
+
   React.useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -106,27 +123,40 @@ function NavBar() {
       style={{ height: "60px" }}
     >
       <NavbarContent justify="start">
-        {/* <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="text-black xl:hidden"
-        /> */}
-        <ScrollLink
-          to={"home"}
-          spy={true}
-          smooth={true}
-          offset={-fixedScrollOffset}
-          className="z-10 flex items-center justify-center hover:cursor-pointer"
-        >
-          <NavbarBrand className="relative -ml-4 max-md:justify-end">
-            <Image
-              src={"/logo.avif"}
-              width={225}
-              height={41}
-              className="object-contain"
-              alt="brand"
-            />
-          </NavbarBrand>
-        </ScrollLink>
+        {pathName == "/" ? (
+          <ScrollLink
+            to={"home"}
+            spy={true}
+            smooth={true}
+            offset={-fixedScrollOffset}
+            className="z-10 flex items-center justify-center hover:cursor-pointer"
+          >
+            <NavbarBrand className="relative -ml-4 max-md:justify-end">
+              <Image
+                src={"/logo.avif"}
+                width={225}
+                height={41}
+                className="object-contain"
+                alt="brand"
+              />
+            </NavbarBrand>
+          </ScrollLink>
+        ) : (
+          <Link
+            href={"/"}
+            className="z-10 flex items-center justify-center hover:cursor-pointer"
+          >
+            <NavbarBrand className="relative -ml-4 max-md:justify-end">
+              <Image
+                src={"/logo.avif"}
+                width={225}
+                height={41}
+                className="object-contain"
+                alt="brand"
+              />
+            </NavbarBrand>
+          </Link>
+        )}
       </NavbarContent>
       <NavbarContent className="hidden gap-8 xl:flex" justify="center">
         {menuItems.map((item, index) => (
@@ -139,19 +169,28 @@ function NavBar() {
         <Button
           size="sm"
           color="primary"
-          className="rounded-lg  hover:font-bold transition-all  text-sm text-white md:px-6"
+          className="rounded-lg text-sm text-white transition-all hover:font-bold md:px-6"
         >
-          <ScrollLink
-            to={"request-appointment"}
-            activeClass=" text-gray-medium"
-            spy={true}
-            smooth={true}
-            offset={-fixedScrollOffset}
-            cellPadding={1}
-            className="z-10 flex items-center justify-center hover:cursor-pointer max-md:text-[10px]"
-          >
-            Request Appointment
-          </ScrollLink>
+          {pathName == "/" ? (
+            <ScrollLink
+              to={"request-appointment"}
+              activeClass=" text-gray-medium"
+              spy={true}
+              smooth={true}
+              offset={-fixedScrollOffset}
+              cellPadding={1}
+              className="z-10 flex items-center justify-center hover:cursor-pointer max-md:text-[10px]"
+            >
+              Request Appointment
+            </ScrollLink>
+          ) : (
+            <Link
+              href={"/#request-appointment"}
+              className="z-10 flex items-center justify-center hover:cursor-pointer max-md:text-[10px]"
+            >
+              Request Appointment
+            </Link>
+          )}
         </Button>
       </NavbarContent>
     </Navbar>
@@ -169,12 +208,15 @@ function BottomNavBarLink({
   icon: React.ReactNode;
   title: string;
 }) {
+  const pathName = usePathname();
+  const { push } = useRouter();
+
   return (
     <Button
       key={linkId + title}
-      onClick={() => scrollToElementById(linkId)}
+      onClick={() => pathName == "/" ? scrollToElementById(linkId) : push(`/#${linkId}`)}
       radius="none"
-      className="flex h-full flex-1 hover:font-bold transition-all flex-col items-center justify-center bg-transparent text-white"
+      className="flex h-full flex-1 flex-col items-center justify-center bg-transparent text-white transition-all hover:font-bold"
     >
       {icon}
       <p className="-mt-1 text-xs">{title}</p>
@@ -186,9 +228,7 @@ const bottomNavarIconClasses = ` text-sm md:text-xl `;
 
 export function BottomNavBar() {
   return (
-    <div
-      className="mx-auto flex h-14 w-[98%] flex-row divide-x divide-[#D9C5A7] rounded-xl border border-[#D9C5A7] bg-[#DCD1BF] py-1 md:w-[90%] xl:hidden bg-opacity-90"
-    >
+    <div className="mx-auto flex h-14 w-[98%] flex-row divide-x divide-[#D9C5A7] rounded-xl border border-[#D9C5A7] bg-[#DCD1BF] bg-opacity-90 py-1 md:w-[90%] xl:hidden">
       <BottomNavBarLink
         icon={<BiHome className={bottomNavarIconClasses} />}
         linkId="home"

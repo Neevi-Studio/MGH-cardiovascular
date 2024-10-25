@@ -1,4 +1,4 @@
-"use client";
+
 import AboutUsSection from "@/components/AboutUsSection";
 import BookAnAppointmentFormSection from "@/components/BookAnAppointmentFormSection";
 import BookAnAppointmentSection from "@/components/BookAnAppointmentSection";
@@ -10,6 +10,7 @@ import InsuranceAndPaymentOptions from "@/components/InsuranceAndPaymentOptions"
 import OurCardiologistSection from "@/components/OurCardiologistSection";
 import OurServicesSection from "@/components/OurServicesSection";
 import Testimonials from "@/components/Testimonials";
+import Blogs from "./Blogs";
 
 const mainStyles = ` mx-auto flex max-xl:text-center max-w-screen-2xl flex-col gap-10 lg:p-10 p-5 xl:gap-20 xl:p-20 `;
 
@@ -23,6 +24,7 @@ export default function Home() {
       <div className="mx-auto my-12 flex max-w-screen-xl flex-col items-center justify-center gap-y-8">
         <AboutUsSection />
         <OurCardiologistSection />
+        <Blogs />
       </div>
 
       <div className="w-full bg-gray-light">
