@@ -65,6 +65,8 @@ function Blog({ params }: { params: { slug: string } }) {
             </blockquote>
 
             <p className="my-5 whitespace-pre-line text-base">{data.content2}</p>
+            <p className="text-gray-900 mt-10 text-xs max-lg:max-w-xl max-lg:mx-auto">Disclaimer* This content is for informational purposes only and not a substitute for professional medical advice. Always consult your healthcare provider for any concerns.</p>
+
           </div>
         </div>
 
