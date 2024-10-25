@@ -46,11 +46,7 @@ function Blog({ params }: { params: { slug: string } }) {
               </h1>
             </div>
 
-            {/*  */}
-
             <p className="my-5 whitespace-pre-line text-base">{data.content}</p>
-
-            {/*  */}
 
             {data?.subHeadings.map((subHeading, index) => (
               <div key={index}>
