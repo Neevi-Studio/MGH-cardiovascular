@@ -7,65 +7,65 @@ import Link from "next/link";
 import { ImMobile } from "react-icons/im";
 import "./globals.css";
 import { Providers } from "./providers";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export const metadata: Metadata = {
-  title: "MGH Cardiovascular Associates | Expert Heart Care & Cardiologists",
+  title: "MGH Cardiovascular Associates | Leading Heart Care & Top Cardiologists",
   description:
-    "MGH Cardiovascular Associates offers advanced cardiovascular care, personalized heart treatments, and expert cardiologists. Specializing in heart disease prevention, cutting-edge diagnostics, and heart health management.",
+    "MGH Cardiovascular Associates delivers world-class cardiovascular care with cutting-edge diagnostics, personalized treatment plans, and prevention strategies led by top cardiologists. Specializing in heart disease prevention, advanced cardiac diagnostics, and innovative treatments to support lifelong heart health.",
   keywords: [
-    "cardiovascular care",
-    "heart care specialists",
-    "cardiologists near me",
-    "heart disease prevention",
-    "advanced heart diagnostics",
-    "personalized heart treatment",
-    "cardiovascular treatments",
-    "heart health services",
-    "cardiovascular services",
-    "cardiac care",
-    "heart surgery",
+    "cardiovascular care experts",
+    "top heart specialists",
+    "best cardiologists near me",
+    "heart disease prevention strategies",
+    "advanced cardiac diagnostics",
+    "personalized heart treatments",
+    "comprehensive cardiovascular services",
     "heart health management",
-    "cardiac diagnostics",
-    "heart disease treatment",
-    "heart care clinic",
-    "MGH Cardiovascular Associates",
-    "best heart doctors",
-    "heart disease prevention tips",
-    "heart health clinic",
-    "top cardiologists",
+    "cardiac care specialists",
+    "cardiac surgery",
+    "preventive heart care",
+    "expert heart doctors",
+    "heart disease treatments",
+    "MGH heart specialists",
+    "leading cardiovascular clinic",
+    "cutting-edge heart diagnostics",
+    "heart health solutions",
+    "best cardiologists in MGH",
+    "advanced cardiovascular treatments",
+    "cardiac care solutions",
   ],
   openGraph: {
-    title: "MGH Cardiovascular Associates - Comprehensive Heart Care",
+    title: "MGH Cardiovascular Associates | Premier Heart Care",
     description:
-      "Trust MGH Cardiovascular Associates for advanced heart care. Our team of expert cardiologists provides personalized treatments, cutting-edge diagnostics, and heart disease prevention services.",
-    // url: "https://www.mghcardio.com", // Add prod url
+      "At MGH Cardiovascular Associates, we offer the highest level of heart care. Our expert cardiologists provide personalized treatments, cutting-edge diagnostics, and comprehensive services for heart disease prevention and management.",
     images: [
       {
-        url: "/heart-care.jpg", // I think it should be an absolute path from the prod url  OR Add metadataBase
+        url: "/heart-care.jpg", 
         width: 1200,
         height: 630,
-        alt: "Heart care equipment and specialists",
+        alt: "State-of-the-art heart care at MGH Cardiovascular Associates",
       },
     ],
     siteName: "MGH Cardiovascular Associates",
   },
-  // metadataBase: new URL("https://www.mghcardio.com"), // Add Prod Url
   twitter: {
     card: "summary_large_image",
-    title: "Advanced Heart Care | MGH Cardiovascular Associates",
+    title: "Comprehensive Heart Care | MGH Cardiovascular Associates",
     description:
-      "MGH Cardiovascular Associates offers expert cardiologists, advanced diagnostics, and personalized heart care treatments. Learn more about our cardiovascular services.",
+      "Discover expert heart care at MGH Cardiovascular Associates, offering personalized cardiovascular treatments, advanced diagnostics, and heart disease prevention. Learn more about our innovative services today.",
     images: [
       {
-        url: "/heart-care.jpg", // I think it should be an absolute path from the prod url OR Add metadataBase
+        url: "/heart-care.jpg", 
         width: 800,
         height: 418,
-        alt: "Heart care services by MGH Cardiovascular Associates",
+        alt: "Top cardiologists at MGH Cardiovascular Associates delivering exceptional care",
       },
     ],
   },
-  category: "Cardiovascular Care",
-  classification: "Cardiovascular Care",
+  category: "Advanced Cardiovascular Care",
+  classification: "Heart Health & Treatment",
 };
 
 export default function RootLayout({

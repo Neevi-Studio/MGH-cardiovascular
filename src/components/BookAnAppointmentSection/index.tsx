@@ -65,7 +65,7 @@ function BookAnAppointmentSection() {
           </div>
         </div>
         <Image
-          src={"images/book-an-appointment.svg"}
+          src={"/images/book-an-appointment.svg"}
           width={574}
           height={720}
           alt="bg"
