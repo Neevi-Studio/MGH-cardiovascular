@@ -20,7 +20,7 @@ function Blogs() {
                         <div className="block lg:text-left text-center">
                             <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-5">Our latest <span className=" text-[#A38457]">blogs</span></h2>
                             <p className="text-gray-900 mb-4  max-lg:max-w-xl max-lg:mx-auto">Stay informed with expert tips, insights, and updates on heart health and cardiovascular disease prevention, helping you stay prepared and proactive in protecting your heart.</p>
-                            <p className="text-gray-900 mb-10 text-xs max-lg:max-w-xl max-lg:mx-auto">Disclaimer* This content is for informational purposes only and not a substitute for professional medical advice. Always consult your healthcare provider for any concerns.</p>
+                            <p className="text-gray-900 mb-10 text-xs max-lg:max-w-xl max-lg:mx-auto">Disclaimer* This content is for informational purposes only and <br /> not a substitute for professional medical advice. <br /> Always consult your healthcare provider for any concerns.</p>
                         </div>
                         <div className="flex items-center     gap-4 mb-4">
                             <button id="slider-button-left" className="swiper-button-prev group flex justify-center items-center border border-solid border-[#A38457] w-11 h-11 transition-all duration-500 rounded-full hover:bg-[#A38457]" data-carousel-prev>
