@@ -9,10 +9,11 @@ import "./globals.css";
 import { Providers } from "./providers";
 import "swiper/css";
 import "swiper/css/pagination";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "MGH Cardiovascular Associates | Leading Heart Care & Top Cardiologists",
-  metadataBase: new URL("https://www.mghcardio.com"), 
+  metadataBase: new URL("https://www.mghcardio.com"),
   description:
     "MGH Cardiovascular Associates delivers world-class cardiovascular care with cutting-edge diagnostics, personalized treatment plans, and prevention strategies led by top cardiologists. Specializing in heart disease prevention, advanced cardiac diagnostics, and innovative treatments to support lifelong heart health.",
   keywords: [
@@ -141,7 +142,7 @@ export const metadata: Metadata = {
       "At MGH Cardiovascular Associates, we offer the highest level of heart care. Our expert cardiologists provide personalized treatments, cutting-edge diagnostics, and comprehensive services for heart disease prevention and management.",
     images: [
       {
-        url: "/heart-care.jpg", 
+        url: "/heart-care.jpg",
         width: 1200,
         height: 630,
         alt: "State-of-the-art heart care at MGH Cardiovascular Associates",
@@ -156,7 +157,7 @@ export const metadata: Metadata = {
       "Discover expert heart care at MGH Cardiovascular Associates, offering personalized cardiovascular treatments, advanced diagnostics, and heart disease prevention. Learn more about our innovative services today.",
     images: [
       {
-        url: "/heart-care.jpg", 
+        url: "/heart-care.jpg",
         width: 800,
         height: 418,
         alt: "Top cardiologists at MGH Cardiovascular Associates delivering exceptional care",
@@ -178,6 +179,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${liberationSans.variable} ${beVietnamPro.variable} ${amiko.variable} ${lato.variable} ${hlad.className} bg-white`}
       >
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        )}
         <Providers>
           <div className="flex w-full items-center justify-center bg-primary px-2 text-sm text-white max-md:py-2 md:h-9 md:px-12">
             <div className="flex w-full max-w-screen-2xl flex-col items-center justify-between gap-y-1 md:flex-row">
