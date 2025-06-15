@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.mghcardio.com
+
+# Sitemaps
+Sitemap: https://www.mghcardio.com/sitemap.xml
