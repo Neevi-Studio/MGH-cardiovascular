@@ -12,7 +12,7 @@ function Blogs() {
 
     const router = useRouter()
     return (
-        <section className="py-12 max-w-screen-xl bg-[#F6F6F6] px-6 rounded-3xl">
+        <section className="py-12 w-full bg-[#F6F6F6] px-6 rounded-3xl">
             <div className="mx-auto   ">
                 <div className="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-4">
 
@@ -22,7 +22,7 @@ function Blogs() {
                             <p className="text-gray-900 mb-4  max-lg:max-w-xl max-lg:mx-auto">Stay informed with expert tips, insights, and updates on heart health and cardiovascular disease prevention, helping you stay prepared and proactive in protecting your heart.</p>
                             <p className="text-gray-900 mb-10 text-xs max-lg:max-w-xl max-lg:mx-auto">Disclaimer* This content is for informational purposes only and <br /> not a substitute for professional medical advice. <br /> Always consult your healthcare provider for any concerns.</p>
                         </div>
-                        <div className="flex items-center     gap-4 mb-4">
+                        <div className="flex items-center gap-4 mb-4 justify-center lg:justify-start">
                             <button id="slider-button-left" className="swiper-button-prev group flex justify-center items-center border border-solid border-[#A38457] w-11 h-11 transition-all duration-500 rounded-full hover:bg-[#A38457]" data-carousel-prev>
                                 <svg className="h-6 w-6 text-[#A38457] group-hover:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" strokeLinejoin="round" />

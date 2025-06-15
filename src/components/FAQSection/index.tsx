@@ -27,7 +27,7 @@ function FAQSection() {
   return (
     <section
       id="faq"
-      className="custom-container w-full flex-col justify-center -mt-20"
+      className="custom-container w-full flex-col justify-center lg:-mt-20"
     >
       <div data-aos="fade-up" className="flex flex-col gap-y-2">
         <p className="text-center text-lg text-primary-50 md:text-2xl">

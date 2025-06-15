@@ -64,10 +64,14 @@ function Testimonials() {
         </h2>
       </div>
       <div className="testimonials-sliders-wrapper relative overflow-hidden">
-        <div className="flex gap-8 p-4" >
+        <div className="md:flex gap-8 p-4 hidden" >
           <TestimonialsSlider key={1} data={cardsData.first} />
           <TestimonialsSlider faster key={2} data={cardsData.second} />
           <TestimonialsSlider key={3} data={cardsData.third} />
+        </div>
+        <div className="md:hidden flex gap-8 p-4">
+          <TestimonialsSlider key={1} data={cardsData.first && cardsData.second && cardsData.third} />
+
         </div>
       </div>
     </section>
