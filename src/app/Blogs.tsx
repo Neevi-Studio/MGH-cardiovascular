@@ -12,8 +12,8 @@ function Blogs() {
 
     const router = useRouter()
     return (
-        <section className="py-12 w-full bg-[#F6F6F6] px-6 rounded-3xl">
-            <div className="mx-auto   ">
+        <section className="w-full py-12 lg:max-w-screen-xl">
+            <div className="mx-auto bg-[#F6F6F6] px-6 rounded-3xl py-12 ">
                 <div className="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-4">
 
                     <div className="w-full flex  flex-col lg:w-2/5">
