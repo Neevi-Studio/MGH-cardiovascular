@@ -176,6 +176,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AOSInit />
+      <head>
+      {/* Preconnect to Google domains */}
+      <link rel="preconnect" href="https://www.google.com" />
+      <link rel="preconnect" href="https://maps.googleapis.com" />
+      <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
+    </head>
       <body
         className={`${inter.variable} ${liberationSans.variable} ${beVietnamPro.variable} ${amiko.variable} ${lato.variable} ${hlad.className} bg-white`}
       >
@@ -187,8 +193,9 @@ export default function RootLayout({
             <div className="flex w-full max-w-screen-2xl flex-col items-center justify-between gap-y-1 md:flex-row">
               <Link
                 className="text-xs max-md:text-center"
-                href={"https://www.google.com/maps"}
+                href={"https://maps.app.goo.gl/CKgzrQiu6NyDTNtX7"}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Address: 680 Broadway, Suite 503, Paterson, NJ 07514
               </Link>
