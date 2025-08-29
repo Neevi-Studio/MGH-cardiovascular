@@ -22,7 +22,7 @@
         <priority>0.8</priority>
     </url>
   <url>
-    <loc>https://www.mghcardio.com/##request-appointment</loc>
+    <loc>https://www.mghcardio.com/#request-appointment</loc>
     <priority>0.9</priority>
   </url>
 </urlset>
