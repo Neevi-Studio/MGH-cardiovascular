@@ -181,6 +181,24 @@ export default function RootLayout({
       <link rel="preconnect" href="https://www.google.com" />
       <link rel="preconnect" href="https://maps.googleapis.com" />
       <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
+    {/* HTML Meta Tags */}
+    <title>MGH Cardiovascular Associates | Premier Heart Care</title>
+    <meta name="description" content="At MGH Cardiovascular Associates, we offer the highest level of heart care. Our expert cardiologists provide personalized treatments, cutting-edge diagnostics, and comprehensive services for heart disease prevention and management." />
+
+    {/* Facebook Meta Tags */}
+    <meta property="og:url" content="https://www.mghcardio.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MGH Cardiovascular Associates | Premier Heart Care" />
+    <meta property="og:description" content="At MGH Cardiovascular Associates, we offer the highest level of heart care. Our expert cardiologists provide personalized treatments, cutting-edge diagnostics, and comprehensive services for heart disease prevention and management." />
+    <meta property="og:image" content="https://www.mghcardio.com/heart-care.jpg" />
+
+    {/* Twitter Meta Tags */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="mghcardio.com" />
+    <meta property="twitter:url" content="https://www.mghcardio.com/" />
+    <meta name="twitter:title" content="MGH Cardiovascular Associates | Premier Heart Care" />
+    <meta name="twitter:description" content="At MGH Cardiovascular Associates, we offer the highest level of heart care. Our expert cardiologists provide personalized treatments, cutting-edge diagnostics, and comprehensive services for heart disease prevention and management." />
+    <meta name="twitter:image" content="https://www.mghcardio.com/heart-care.jpg" />
     </head>
       <body
         className={`${inter.variable} ${liberationSans.variable} ${beVietnamPro.variable} ${amiko.variable} ${lato.variable} ${hlad.className} bg-white`}

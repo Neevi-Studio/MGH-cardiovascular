@@ -11,4 +11,3 @@ Host: https://www.mghcardio.com
 
 # Sitemaps
 Sitemap: https://www.mghcardio.com/sitemap.xml
-Sitemap: https://mghcardio.com/sitemap.xml
