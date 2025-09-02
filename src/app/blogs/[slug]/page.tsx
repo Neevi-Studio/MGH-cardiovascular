@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
   return {
     title: `${data.title} | MGH Cardiovascular Associates`,
-    description: data.shortDescription || "Stay informed with expert cardiology insights, heart health tips, and the latest news from MGH Cardiovascular Associates."
+    description: data.shortDescription
   };
 }
 
