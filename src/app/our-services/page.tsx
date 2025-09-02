@@ -7,5 +7,12 @@ export default function OurServicesRedirect() {
   useEffect(() => {
     router.replace("/#our-services");
   }, [router]);
-  return null;
+  return (
+    <>
+      <head>
+        <title>Cardiology Services – In-Office Cardiac Testing, Preventative & Interventional Care</title>
+        <meta name="description" content="Explore our full range of cardiology services, including in-office cardiac testing, preventative care, and interventional treatments for optimal heart health." />
+      </head>
+    </>
+  );
 }

@@ -16,6 +16,10 @@ function Blog({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      <head>
+        <title>{data.title} – Cardiology Insights & Heart Health Tips | MGH Cardiovascular Associates</title>
+        <meta name="description" content="Stay informed with expert cardiology insights, heart health tips, and the latest news from MGH Cardiovascular Associates." />
+      </head>
       <div className="relative mx-auto max-w-screen-xl space-y-16 p-5 sm:p-8 md:p-12">
         <Image
           src={`/cardiovascular-disease-banner.png`}

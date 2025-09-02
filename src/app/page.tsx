@@ -21,7 +21,8 @@ export default function Home() {
   return (
     <main>
       <Head>
-      <title>MGH Cardiovascular Associates</title>
+    <title>MGH Cardiovascular Associates – Comprehensive Heart Care & Cardiac Testing in Boston</title>
+    <meta name="description" content="Discover comprehensive heart care and advanced cardiac testing at MGH Cardiovascular Associates in Boston. Our expert team is dedicated to your heart health." />
       <meta name="description" content="We offer comprehensive in-office cardiac testing to accurately diagnose and manage heart conditions." />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />

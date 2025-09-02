@@ -7,5 +7,12 @@ export default function AboutUsRedirect() {
   useEffect(() => {
     router.replace("/#about-us");
   }, [router]);
-  return null;
+  return (
+    <>
+      <head>
+        <title>About MGH Cardiovascular Associates – Expert Heart Specialists & Cardiology Team</title>
+        <meta name="description" content="Meet the expert cardiologists and compassionate care team at MGH Cardiovascular Associates. Learn about our mission, values, and commitment to heart health." />
+      </head>
+    </>
+  );
 }

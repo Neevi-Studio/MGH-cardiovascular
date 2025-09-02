@@ -7,5 +7,12 @@ export default function TestimonialsRedirect() {
   useEffect(() => {
     router.replace("/#testimonials");
   }, [router]);
-  return null;
+  return (
+    <>
+      <head>
+        <title>Patient Testimonials – MGH Cardiovascular Associates Heart Care Reviews</title>
+        <meta name="description" content="Read real patient testimonials and reviews about heart care experiences at MGH Cardiovascular Associates. See why patients trust our cardiology team." />
+      </head>
+    </>
+  );
 }
