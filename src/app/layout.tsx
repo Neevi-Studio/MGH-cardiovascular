@@ -181,9 +181,6 @@ export default function RootLayout({
       <link rel="preconnect" href="https://www.google.com" />
       <link rel="preconnect" href="https://maps.googleapis.com" />
       <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
-    {/* HTML Meta Tags */}
-    {/* <title>MGH Cardiovascular Associates | Premier Heart Care</title> */}
-    <meta name="description" content="At MGH Cardiovascular Associates, we offer the highest level of heart care. Our expert cardiologists provide personalized treatments, cutting-edge diagnostics, and comprehensive services for heart disease prevention and management." />
 
     {/* Facebook Meta Tags */}
     <meta property="og:url" content="https://www.mghcardio.com/" />
