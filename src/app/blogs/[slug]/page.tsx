@@ -5,6 +5,22 @@ import Footer from "@/components/Footer";
 import BookAnAppointmentFormSection from "@/components/BookAnAppointmentFormSection";
 import BookAnAppointmentSection from "@/components/BookAnAppointmentSection";
 
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const data = blogs.find(blog => blog.slug === params.slug);
+  if (!data) {
+    return {
+      title: "Blog | MGH Cardiovascular Associates",
+      description: "Stay informed with expert cardiology insights, heart health tips, and the latest news from MGH Cardiovascular Associates."
+    };
+  }
+  return {
+    title: `${data.title} | MGH Cardiovascular Associates`,
+    description: data.shortDescription || "Stay informed with expert cardiology insights, heart health tips, and the latest news from MGH Cardiovascular Associates."
+  };
+}
+
 export async function generateStaticParams() {
   return blogs.map((blog) => ({
     slug: blog.slug,
@@ -16,10 +32,6 @@ function Blog({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <head>
-        <title>{data.title} - Cardiology Insights & Heart Health Tips | MGH Cardiovascular Associates</title>
-        <meta name="description" content="Stay informed with expert cardiology insights, heart health tips, and the latest news from MGH Cardiovascular Associates." />
-      </head>
       <div className="relative mx-auto max-w-screen-xl space-y-16 p-5 sm:p-8 md:p-12">
         <Image
           src={`/cardiovascular-disease-banner.png`}
@@ -62,7 +74,6 @@ function Blog({ params }: { params: { slug: string } }) {
                 </p>
               </div>
             ))}
-
 
             <blockquote className="my-5 border-l-4 p-5 text-base italic leading-8 text-primary">
               {data.blockquote}
