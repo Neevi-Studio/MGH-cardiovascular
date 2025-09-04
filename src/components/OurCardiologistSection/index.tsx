@@ -79,7 +79,7 @@ function OurCardiologistSection() {
       </div>
 
       <div className="inner-container flex-col xl:w-full">
-        <h1 className="text-primary">Meet Our Cardiologist</h1>
+        <h2 className="text-primary">Meet Our Cardiologist</h2>
         <p className="text-2xl text-black xl:text-4xl">
           Mirette Habib, MD, FACC
         </p>

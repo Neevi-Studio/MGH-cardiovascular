@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "MGH Cardiovascular Associates | Leading Heart Care & Top Cardiologists",
   metadataBase: new URL("https://www.mghcardio.com"),
   description:
-    "MGH Cardiovascular Associates delivers world-class cardiovascular care with cutting-edge diagnostics, personalized treatment plans, and prevention strategies led by top cardiologists. Specializing in heart disease prevention, advanced cardiac diagnostics, and innovative treatments to support lifelong heart health.",
+    "Welcome to MGH Cardiovascular Associates, where pioneering heart care meets personalized treatment.",
   keywords: [
     "Cardiovascular care experts",
     "Top heart specialists",
