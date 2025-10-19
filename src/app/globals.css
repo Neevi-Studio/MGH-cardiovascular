@@ -165,3 +165,12 @@
     --tw-text-opacity: 1;
     color: rgb(79 70 229 / var(--tw-text-opacity));
 }
+
+/* Toast notifications styling */
+.react-hot-toast {
+    z-index: 9999 !important;
+}
+
+.react-hot-toast > div {
+    z-index: 9999 !important;
+}
