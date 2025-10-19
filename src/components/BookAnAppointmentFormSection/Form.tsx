@@ -23,6 +23,7 @@ function Form() {
     insurance: "",  // Optional
     policy: "",     // Optional
     message: "",    // Optional
+    company: "",    // Honeypot
   });
 
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) {
@@ -35,6 +36,8 @@ function Form() {
   const [isLoading, setIsLoading] = useState(false);
 
   const formRef = useRef<HTMLFormElement>(null);
+  const mountedAtRef = useRef<number>(Date.now());
+  const lastSubmitAtRef = useRef<number>(0);
 
   const clearForm = () => {
     setFormData({
@@ -45,11 +48,42 @@ function Form() {
       insurance: "",
       policy: "",
       message: "",
+      company: "",
     })
   }
 
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
+  
+  // Honeypot: if filled, silently succeed without processing
+  if (formData.company && formData.company.trim().length > 0) {
+    return;
+  }
+  
+  // Time gate: prevent instant bot submissions (< 5s from mount)
+  const now = Date.now();
+  const elapsedMs = now - mountedAtRef.current;
+  if (elapsedMs < 5000) {
+    toast.error('Please take a moment to complete the form before submitting.', {
+      position: 'top-center',
+      duration: 4000,
+      style: {
+        background: '#FEE2E2',
+        color: '#B91C1C',
+        padding: '16px',
+        borderRadius: '8px',
+        maxWidth: '500px',
+        margin: '0 auto',
+      },
+    });
+    return;
+  }
+  
+  // Basic debounce: ignore rapid re-submits (< 2s)
+  if (now - lastSubmitAtRef.current < 2000) {
+    return;
+  }
+  lastSubmitAtRef.current = now;
   
   // Show loading state
   const loadingToast = toast.loading('Submitting your appointment request...', {
@@ -248,6 +282,18 @@ const handleSubmit = async (e: React.FormEvent) => {
         onSubmit={handleSubmit}
         className="flex w-full flex-col gap-3 "
       >
+        {/* Honeypot field (visually hidden but present for bots) */}
+        <div aria-hidden="true" className="absolute -left-[10000px] w-px h-px overflow-hidden">
+          <label htmlFor="company">Company</label>
+          <input
+            id="company"
+            name="company"
+            autoComplete="off"
+            tabIndex={-1}
+            value={formData.company}
+            onChange={(e) => setFormData({ ...formData, company: (e.target as HTMLInputElement).value })}
+          />
+        </div>
         <div className={`${inputsContainerStyles}`}>
           <div className={`${mainInputsContainerStyles}`}>
             <label htmlFor="firstname" className="ml-2 text-left">
