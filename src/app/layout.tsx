@@ -10,13 +10,18 @@ import { Providers } from "./providers";
 import "swiper/css";
 import "swiper/css/pagination";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "MGH Cardiovascular Associates | Leading Heart Care & Top Cardiologists",
   metadataBase: new URL("https://www.mghcardio.com"),
+  alternates: {
+    canonical: './',
+  },
   description:
     "Welcome to MGH Cardiovascular Associates, where pioneering heart care meets personalized treatment.",
   keywords: [
+    "cardiovascular clinic in paterson nj",
     "Cardiovascular care experts",
     "Top heart specialists",
     "Best cardiologists near me",
@@ -134,7 +139,25 @@ export const metadata: Metadata = {
     "Cardiovascular Consultations NJ",
     "Heart Health Services Paterson",
     "Chronic Heart Failure Management NJ",
-    "Cardiac Testing Paterson NJ"
+    "Cardiac Testing Paterson NJ",
+    "Cardiologist Clifton NJ",
+    "Heart Doctor Wayne NJ",
+    "Cardiovascular Specialist Passaic County",
+    "Best Heart Doctor Paramus NJ",
+    "Top Cardiologist North Jersey",
+    "Heart Specialist Totowa NJ",
+    "Cardiology Woodland Park NJ",
+    "Cardiovascular Specialist Northern New Jersey",
+    "Heart Center Passaic County",
+    "Vein Treatment Paterson NJ",
+    "Top Rated Cardiologist NJ",
+    "Minimally invasive heart procedures NJ",
+    "Nuclear Stress Test NJ",
+    "Arrhythmia Treatment NJ",
+    "Peripheral Artery Disease Specialist",
+    "Heart and Vascular Center Paterson",
+    "Cardiac Care Northern NJ",
+    "cardiologist paterson nj"
   ],
   openGraph: {
     title: "MGH Cardiovascular Associates | Premier Heart Care",
@@ -149,6 +172,8 @@ export const metadata: Metadata = {
       },
     ],
     siteName: "MGH Cardiovascular Associates",
+    type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
@@ -177,26 +202,12 @@ export default function RootLayout({
     <html lang="en">
       <AOSInit />
       <head>
-      {/* Preconnect to Google domains */}
-      <link rel="preconnect" href="https://www.google.com" />
-      <link rel="preconnect" href="https://maps.googleapis.com" />
-      <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
-
-    {/* Facebook Meta Tags */}
-    <meta property="og:url" content="https://www.mghcardio.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="MGH Cardiovascular Associates | Premier Heart Care" />
-    <meta property="og:description" content="At MGH Cardiovascular Associates, we offer the highest level of heart care. Our expert cardiologists provide personalized treatments, cutting-edge diagnostics, and comprehensive services for heart disease prevention and management." />
-    <meta property="og:image" content="https://www.mghcardio.com/heart-care.jpg" />
-
-    {/* Twitter Meta Tags */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="mghcardio.com" />
-    <meta property="twitter:url" content="https://www.mghcardio.com/" />
-    <meta name="twitter:title" content="MGH Cardiovascular Associates | Premier Heart Care" />
-    <meta name="twitter:description" content="At MGH Cardiovascular Associates, we offer the highest level of heart care. Our expert cardiologists provide personalized treatments, cutting-edge diagnostics, and comprehensive services for heart disease prevention and management." />
-    <meta name="twitter:image" content="https://www.mghcardio.com/heart-care.jpg" />
-    </head>
+        {/* Preconnect to Google domains */}
+        <link rel="preconnect" href="https://www.google.com" />
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
+        <StructuredData />
+      </head>
       <body
         className={`${inter.variable} ${liberationSans.variable} ${beVietnamPro.variable} ${amiko.variable} ${lato.variable} ${hlad.className} bg-white`}
       >
@@ -237,6 +248,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 //
 //

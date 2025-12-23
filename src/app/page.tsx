@@ -11,8 +11,14 @@ import OurCardiologistSection from "@/components/OurCardiologistSection";
 import OurServicesSection from "@/components/OurServicesSection";
 // import Testimonials from "@/components/Testimonials";
 import Blogs from "./Blogs";
-import Head from "next/head";
+
 import dynamic from "next/dynamic";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "MGH Cardiovascular Associates – Comprehensive Heart Care & Cardiac Testing in Paterson, NJ",
+  description: "Discover comprehensive heart care and advanced cardiac testing at MGH Cardiovascular Associates in Paterson, NJ. Our expert team is dedicated to your heart health. We offer comprehensive in-office cardiac testing to accurately diagnose and manage heart conditions.",
+};
 
 const mainStyles = ` mx-auto flex max-xl:text-center max-w-screen-2xl flex-col gap-10 lg:p-10 p-5 xl:gap-20 xl:p-20 `;
 const Testimonials = dynamic(() => import("@/components/Testimonials"), { loading: () => <p>Loading...</p> });
@@ -20,14 +26,6 @@ const Testimonials = dynamic(() => import("@/components/Testimonials"), { loadin
 export default function Home() {
   return (
     <main>
-      <Head>
-    <title>MGH Cardiovascular Associates – Comprehensive Heart Care & Cardiac Testing in Boston</title>
-    <meta name="description" content="Discover comprehensive heart care and advanced cardiac testing at MGH Cardiovascular Associates in Boston. Our expert team is dedicated to your heart health." />
-      <meta name="description" content="We offer comprehensive in-office cardiac testing to accurately diagnose and manage heart conditions." />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="canonical" href="https://www.mghcardio.com/" />
-    </Head>
       <div className={mainStyles}>
         <HeroSection />
         <ControlYourHeartHealthVideoSection />
