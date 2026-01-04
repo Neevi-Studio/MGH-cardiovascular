@@ -6,6 +6,8 @@ export const blogs = [
     "image": "Understanding Cardiovascular Diseases- A Comprehensive Overview.webp",
     "hashtags": ["CardiovascularHealth", "HeartDisease", "HealthyHeart"],
     "writtenBy": "Dr. James Thompson",
+    "datePublished": "2024-11-15",
+    "dateModified": "2025-01-02",
     "shortDescription":'Learn what cardiovascular diseases are, their common causes, and how you can prevent them with heart-healthy habits. Understanding the risk factors is the first step toward a healthier heart.'
     ,"content": "Cardiovascular diseases (CVDs) remain the leading cause of death globally, accounting for approximately 17.9 million deaths each year. Despite this staggering figure, most CVDs are preventable through lifestyle changes and regular medical checkups. Understanding what cardiovascular diseases are, how they develop, and the major risk factors involved is crucial to safeguarding your heart health. CVDs are a broad category of disorders that affect the heart and blood vessels. They range from coronary artery disease (CAD), which is the most common type, to more severe conditions like heart failure, arrhythmias, and peripheral artery disease.",
     "content2": "While the underlying causes of these diseases may vary, they share common risk factors like high blood pressure (hypertension), elevated cholesterol levels, smoking, poor diet, physical inactivity, and obesity. Addressing these risk factors through both lifestyle modifications and medical treatments can significantly reduce your risk. In this guide, we will explore the different types of cardiovascular diseases, their causes, symptoms, and, most importantly, effective prevention strategies that can help you live a long and heart-healthy life.",
@@ -38,6 +40,8 @@ export const blogs = [
     "image": "What Causes Cardiovascular Diseases and How to Avoid Them.webp",
     "hashtags": ["HeartHealth", "CardiovascularCauses", "PreventCVD"],
     "writtenBy": "Dr. Sarah Johnson",
+    "datePublished": "2024-11-18",
+    "dateModified": "2025-01-02",
     "content": "Cardiovascular diseases (CVDs) are the leading cause of death globally, affecting millions each year. While genetics play a role, most cardiovascular diseases stem from modifiable risk factors. Understanding what causes CVDs and how to avoid them can significantly reduce your risk of heart-related complications. CVDs typically occur due to the buildup of plaque in the arteries, a condition called atherosclerosis. This plaque buildup restricts blood flow, leading to heart attacks, strokes, and other severe cardiovascular events.",
     "content2": "By addressing common risk factors such as smoking, high blood pressure, high cholesterol, physical inactivity, and poor diet, you can greatly reduce your chances of developing CVDs. In this blog, we will discuss the key causes of cardiovascular diseases, how they affect the heart, and provide you with actionable tips to prevent them.",
     "subHeadings": [
@@ -65,6 +69,8 @@ export const blogs = [
     "image": "Top 5 Lifestyle Changes to Prevent Cardiovascular Diseases.webp",
     "hashtags": ["LifestyleChanges", "PreventCVD", "HeartHealth"],
     "writtenBy": "Dr. Michael Roberts",
+    "datePublished": "2024-11-22",
+    "dateModified": "2025-01-02",
     "content": "Cardiovascular diseases (CVDs) are preventable in many cases, with lifestyle choices playing a pivotal role in heart health. While factors like genetics and age are beyond your control, making positive lifestyle changes can significantly reduce your risk of heart disease. By incorporating heart-healthy habits into your daily routine, you can help protect your heart, improve circulation, and lower your risk of heart attacks and strokes.",
     "content2": "In this blog, we will explore five key lifestyle changes that have been proven to prevent cardiovascular diseases. From diet and exercise to stress management, these simple yet effective strategies can make a big difference in your heart health and overall well-being.",
     "subHeadings": [
@@ -100,6 +106,8 @@ export const blogs = [
     "image": "How to Keep Your Heart Healthy- Diet and Exercise Tips.webp",
     "hashtags": ["HeartHealth", "Exercise", "HealthyDiet"],
     "writtenBy": "Dr. Emily Collins",
+    "datePublished": "2024-11-25",
+    "dateModified": "2025-01-02",
     "content": "Maintaining heart health is essential for a long and healthy life. Diet and exercise play a crucial role in preventing cardiovascular diseases and improving overall well-being. Adopting heart-healthy habits, such as regular physical activity and a balanced diet, can significantly reduce your risk of heart disease, improve circulation, and strengthen your heart muscles. In this blog, we will explore practical tips on how to keep your heart healthy through dietary choices and exercise routines.",
     "content2": "The right combination of diet and exercise can help lower cholesterol, reduce blood pressure, maintain a healthy weight, and reduce the risk of heart attacks and strokes. Whether you’re just starting your journey toward better heart health or looking for ways to enhance your current routine, these simple yet effective tips can guide you in the right direction.",
     "subHeadings": [
@@ -131,6 +139,8 @@ export const blogs = [
     "image": "Managing Blood Pressure to Prevent Cardiovascular Diseases.webp",
     "hashtags": ["BloodPressure", "HeartHealth", "PreventCVD"],
     "writtenBy": "Dr. Robert Greene",
+    "datePublished": "2024-11-28",
+    "dateModified": "2025-01-02",
     "content": "High blood pressure, also known as hypertension, is one of the leading causes of cardiovascular diseases (CVDs). Often referred to as the 'silent killer,' hypertension can go unnoticed for years, causing damage to the heart and arteries. Managing blood pressure is a critical step in preventing heart attacks, strokes, and other cardiovascular complications. In this blog, we will explore how high blood pressure affects your heart and provide practical tips to keep it under control.",
     "content2": "Blood pressure is the force exerted by the blood against the walls of the arteries. When this pressure remains consistently high, it weakens the arteries and strains the heart, leading to serious health problems. The good news is that high blood pressure is manageable with the right lifestyle choices and medical treatments. Read on to learn more about the risks of hypertension and how to prevent cardiovascular diseases by maintaining healthy blood pressure levels.",
     "subHeadings": [
@@ -162,6 +172,8 @@ export const blogs = [
     "image": "The Impact of Smoking on Heart Health- Why You Should Quit.webp",
     "hashtags": ["QuitSmoking", "HeartHealth", "HealthyLiving"],
     "writtenBy": "Dr. Linda Garcia",
+    "datePublished": "2024-12-02",
+    "dateModified": "2025-01-02",
     "content": "Smoking is one of the most significant risk factors for cardiovascular diseases (CVDs). It’s a habit that not only damages the lungs but also wreaks havoc on the heart and blood vessels. Smokers are at a higher risk of developing coronary artery disease, heart attacks, strokes, and peripheral artery disease. The good news is that quitting smoking can have immediate and long-term benefits for your heart health, reducing your risk of heart disease within just a few years of quitting. In this blog, we’ll explore the impact of smoking on heart health and provide you with practical tips on how to quit for good.",
     "content2": "The chemicals in tobacco smoke harm your heart and blood vessels in numerous ways, contributing to the development of atherosclerosis (the buildup of fatty deposits in the arteries), which restricts blood flow to the heart and brain. Smoking also raises blood pressure, reduces the amount of oxygen in the blood, and increases the likelihood of blood clots. All of these factors put smokers at an increased risk of heart disease and stroke. If you’re a smoker, quitting now is the best decision you can make for your heart and overall health.",
     "subHeadings": [
@@ -193,6 +205,8 @@ export const blogs = [
     "image": "Cholesterol and Heart Disease- What You Need to Know.webp",
     "hashtags": ["Cholesterol", "HeartHealth", "PreventHeartDisease"],
     "writtenBy": "Dr. Steven Wilson",
+    "datePublished": "2024-12-06",
+    "dateModified": "2025-01-02",
     "content": "Cholesterol is often seen as the enemy of heart health, but the truth is a bit more complex. While too much cholesterol can increase your risk of heart disease, your body actually needs a certain amount of cholesterol to function properly. Cholesterol is a type of fat found in your blood that helps build cell membranes and produce hormones. The problem arises when you have too much LDL (bad) cholesterol in your bloodstream, which can lead to the buildup of plaque in the arteries, increasing your risk of heart disease and stroke. In this blog, we’ll explore how cholesterol affects your heart and what you can do to maintain healthy cholesterol levels.",
     "content2": "There are two main types of cholesterol: LDL (low-density lipoprotein) and HDL (high-density lipoprotein). LDL is often called 'bad' cholesterol because it contributes to the buildup of plaque in the arteries, while HDL is known as 'good' cholesterol because it helps remove excess cholesterol from the bloodstream. Keeping your LDL levels low and your HDL levels high is essential for heart health. In this blog, we’ll explain how cholesterol contributes to heart disease and provide tips on how to manage your cholesterol levels to reduce your risk.",
     "subHeadings": [
@@ -224,6 +238,8 @@ export const blogs = [
     "image": "How to Prevent Heart Disease Through Stress Management.webp",
     "hashtags": ["StressManagement", "HeartHealth", "MentalWellness"],
     "writtenBy": "Dr. Karen Mitchell",
+    "datePublished": "2024-12-10",
+    "dateModified": "2025-01-02",
     "content": "Stress is a normal part of life, but when it becomes chronic, it can have a serious impact on your heart health. Chronic stress triggers a surge of hormones like cortisol and adrenaline, which raise blood pressure, increase heart rate, and contribute to unhealthy coping behaviors like overeating, smoking, or drinking alcohol. Over time, these effects can lead to the development of cardiovascular diseases (CVDs). Fortunately, there are many ways to manage stress and protect your heart. In this blog, we’ll explore the connection between stress and heart disease and provide practical strategies for reducing stress to keep your heart healthy.",
     "content2": "Stress management is an essential component of heart health. By reducing chronic stress, you can lower your blood pressure, reduce inflammation, and improve your overall well-being. In this blog, we’ll discuss how stress affects the heart, the link between stress and cardiovascular diseases, and provide you with effective stress-reduction techniques to promote heart health.",
     "subHeadings": [
@@ -255,6 +271,8 @@ export const blogs = [
     "image": "The Role of Regular Checkups in Preventing Cardiovascular Diseases.webp",
     "hashtags": ["RegularCheckups", "HeartHealth", "PreventHeartDisease"],
     "writtenBy": "Dr. Matthew Davis",
+    "datePublished": "2024-12-15",
+    "dateModified": "2025-01-02",
     "content": "Preventing cardiovascular diseases (CVDs) begins with early detection and proper management of risk factors like high blood pressure, high cholesterol, and diabetes. Regular checkups with your healthcare provider are essential for monitoring your heart health and identifying potential problems before they become serious. During these checkups, your doctor can assess your overall cardiovascular risk, perform routine tests, and recommend lifestyle changes or medications to keep your heart healthy. In this blog, we’ll explore the importance of regular checkups and how they play a crucial role in preventing heart disease.",
     "content2": "Many cardiovascular diseases develop silently over time, showing little to no symptoms until they have progressed to a more dangerous stage. Regular checkups allow your healthcare provider to detect early warning signs of heart disease and intervene before serious complications occur. From blood pressure measurements to cholesterol screenings, these routine visits help you stay proactive about your heart health and make informed decisions about lifestyle changes and treatments.",
     "subHeadings": [
@@ -286,6 +304,8 @@ export const blogs = [
   "image": "Understanding the Risk Factors for Cardiovascular Diseases.webp",
   "hashtags": ["HeartDiseaseRisk", "PreventCVD", "HealthyHeart"],
   "writtenBy": "Dr. Olivia Walker",
+  "datePublished": "2024-12-20",
+  "dateModified": "2025-01-02",
   "content": "Cardiovascular diseases (CVDs) are the leading cause of death worldwide, but many of the risk factors associated with these conditions are preventable. Understanding the factors that increase your risk of developing heart disease is the first step toward taking control of your heart health. In this blog, we’ll discuss the most common risk factors for cardiovascular diseases and provide tips on how to minimize them.",
   "content2": "There are two types of risk factors for cardiovascular diseases: modifiable and non-modifiable. Modifiable risk factors are those you can control, such as diet, physical activity, and smoking habits. Non-modifiable risk factors, on the other hand, are things you cannot change, such as age, gender, and family history. By focusing on reducing your modifiable risk factors, you can greatly reduce your chances of developing heart disease. In this blog, we’ll break down both types of risk factors and explain how you can protect your heart.",
   "subHeadings": [

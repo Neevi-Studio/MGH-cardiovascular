@@ -1,5 +1,6 @@
 "use client";
 import { Accordion, AccordionItem } from "@nextui-org/react";
+import FAQPageSchema from "../FAQPageSchema";
 
 const accordionItemsData = [
   {
@@ -23,12 +24,19 @@ const accordionItemsData = [
     text: "Specific instructions may vary based on the exam. Generally, you may be asked to avoid caffeine, fast for a few hours, and/or stop certain medications. We will provide all necessary instructions when you book your appointment",
   },
 ];
+
+const faqSchemaData = accordionItemsData.map(item => ({
+  question: item.title,
+  answer: item.text
+}));
+
 function FAQSection() {
   return (
     <section
       id="faq"
       className="custom-container w-full flex-col justify-center lg:-mt-20"
     >
+      <FAQPageSchema faqs={faqSchemaData} />
       <div data-aos="fade-up" className="flex flex-col gap-y-2">
         <p className="text-center text-lg text-primary-50 md:text-2xl">
           Frequently Asked Questions (FAQ)

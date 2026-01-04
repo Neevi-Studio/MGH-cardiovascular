@@ -1,9 +1,10 @@
-import HeroSection from "@/components/HeroSection";
 import Image from "next/image";
 import { blogs } from "./data";
 import Footer from "@/components/Footer";
 import BookAnAppointmentFormSection from "@/components/BookAnAppointmentFormSection";
 import BookAnAppointmentSection from "@/components/BookAnAppointmentSection";
+import BlogPostingSchema from "@/components/BlogPostingSchema";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 import type { Metadata } from "next";
 
@@ -17,7 +18,22 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
   return {
     title: `${data.title} | MGH Cardiovascular Associates`,
-    description: data.shortDescription
+    description: data.shortDescription,
+    openGraph: {
+      title: `${data.title} | MGH Cardiovascular Associates`,
+      description: data.shortDescription,
+      type: 'article',
+      publishedTime: data.datePublished,
+      modifiedTime: data.dateModified,
+      authors: [data.writtenBy],
+      images: [{
+        url: '/cardiovascular-disease-banner.png',
+        width: 1200,
+        height: 630,
+        alt: data.title
+      }]
+    },
+    authors: [{ name: data.writtenBy }],
   };
 }
 
@@ -30,8 +46,25 @@ export async function generateStaticParams() {
 function Blog({ params }: { params: { slug: string } }) {
   const data = blogs.filter((blog) => blog?.slug === params.slug)?.[0];
 
+  const breadcrumbItems = [
+    { name: 'Home', url: 'https://www.mghcardio.com/' },
+    { name: 'Blogs', url: 'https://www.mghcardio.com/#blogs' },
+    { name: data.title, url: `https://www.mghcardio.com/blogs/${data.slug}` }
+  ];
+
   return (
     <>
+      <BlogPostingSchema
+        title={data.title}
+        description={data.shortDescription}
+        slug={data.slug}
+        image={data.image}
+        author={data.writtenBy}
+        datePublished={data.datePublished}
+        dateModified={data.dateModified}
+        hashtags={data.hashtags}
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <div className="relative mx-auto max-w-screen-xl space-y-16 p-5 sm:p-8 md:p-12">
         <Image
           src={`/cardiovascular-disease-banner.png`}

@@ -45,6 +45,7 @@ function HeroSection() {
           width={534}
           height={578}
           className="xl:w-full"
+          priority
         />
         <Image
           data-aos="fade-up"

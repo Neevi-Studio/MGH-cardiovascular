@@ -1,4 +1,5 @@
 import TestimonialsSlider from "./TestimonialsSlider";
+import ReviewSchema from "../ReviewSchema";
 
 const cardsData = {
   first: [
@@ -54,9 +55,13 @@ const cardsData = {
   ],
 };
 
+// Combine all testimonials for schema
+const allReviews = [...cardsData.first, ...cardsData.second, ...cardsData.third];
+
 function Testimonials() {
   return (
     <section id="testimonials" className="custom-container flex-col max-w-screen overflow-x-hidden">
+      <ReviewSchema reviews={allReviews} />
       <div className="inner-container flex-col">
         <p className="text-center text-xl text-primary">Testimonials</p>
         <h2 className="text-center text-3xl font-bold text-black">
