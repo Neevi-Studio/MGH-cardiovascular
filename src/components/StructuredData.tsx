@@ -40,8 +40,17 @@ const StructuredData = () => {
             "areaServed": "US",
             "availableLanguage": ["en", "es"]
         },
+        "areaServed": [
+            "Paterson, NJ",
+            "Passaic County",
+            "Northern New Jersey"
+        ],
+        "paymentAccepted": "Cash, Credit Card, Insurance",
         "sameAs": [
-            "https://www.facebook.com/people/MGH-Cardiovascular-Associates/61556637840134/"
+            "https://www.facebook.com/people/MGH-Cardiovascular-Associates/61556637840134/",
+            "https://www.instagram.com/mghcardio",
+            "https://twitter.com/mghcardio",
+            "https://www.linkedin.com/company/mgh-cardiovascular-associates"
         ],
         "medicalSpecialty": [
             "Cardiology",
