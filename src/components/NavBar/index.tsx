@@ -32,6 +32,7 @@ function NavBarItemLink({
     <ScrollLink
       onClick={() => setIsMenuOpen && setIsMenuOpen(false)}
       to={item?.link}
+      href={`#${item?.link}`}
       activeClass={"font-bold text-primary"}
       spy={true}
       smooth={true}
@@ -126,6 +127,7 @@ function NavBar() {
         {pathName == "/" ? (
           <ScrollLink
             to={"home"}
+            href="#home"
             spy={true}
             smooth={true}
             offset={-fixedScrollOffset}
@@ -174,6 +176,7 @@ function NavBar() {
           {pathName == "/" ? (
             <ScrollLink
               to={"request-appointment"}
+              href="#request-appointment"
               activeClass=" text-gray-medium"
               spy={true}
               smooth={true}

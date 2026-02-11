@@ -1,6 +1,5 @@
 
 import RequestAppointmentClientBtn from "./RequestAppointmentClientBtn";
-import VideoSchema from "../VideoSchema";
 
 function ControlYourHeartHealthVideoSection() {
   return (
@@ -11,13 +10,6 @@ function ControlYourHeartHealthVideoSection() {
         src="https://player.vimeo.com/video/954976359?muted=1&autoplay=1&autopause=0&controls=0&loop=1&app_id=122963&dnt=1"
         title="Control Your Heart Health"
       ></iframe>
-      <VideoSchema
-        name="Control Your Heart Health"
-        description="Discover how regular cardiovascular check-ups can enhance your life quality and longevity with MGH Cardiovascular Associates."
-        thumbnailUrl="https://www.mghcardio.com/images/hero-section.svg"
-        uploadDate="2024-05-20"
-        embedUrl="https://player.vimeo.com/video/954976359"
-      />
 
       <div className="inner-container z-[2] mt-auto flex-col text-white max-xl:mx-auto">
         <h2 className="text-2xl xl:text-4xl">
