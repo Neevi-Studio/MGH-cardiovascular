@@ -9,6 +9,12 @@
     "lint": "next lint",
     "postbuild": "next-sitemap"
   },
+  "browserslist": [
+    "chrome >= 80",
+    "firefox >= 78",
+    "safari >= 13",
+    "edge >= 80"
+  ],
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@nextui-org/react": "^2.4.2",

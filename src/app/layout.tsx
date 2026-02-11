@@ -204,8 +204,6 @@ export default function RootLayout({
       <head>
         {/* Preconnect to Google domains */}
         <link rel="preconnect" href="https://www.google.com" />
-        <link rel="preconnect" href="https://maps.googleapis.com" />
-        <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
         <StructuredData />
       </head>
       <body
