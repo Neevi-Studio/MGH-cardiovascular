@@ -211,7 +211,12 @@ export default function RootLayout({
     <html lang="en">
       <AOSInit />
       <head>
-        {/* Preconnect to Google domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link rel="preconnect" href="https://www.google.com" />
         <meta name="theme-color" content="#1e3a5f" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

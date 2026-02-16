@@ -63,9 +63,7 @@ function NavBarItemLink({
 export const scrollToElementById = (id: string) => {
   const element = document.getElementById(id);
   if (element) {
-    const y =
-      element.getBoundingClientRect().top + window.scrollY - fixedScrollOffset;
-    window.scrollTo({ top: y, behavior: "smooth" });
+    element.scrollIntoView({ behavior: "smooth" });
   }
 };
 
@@ -101,14 +99,17 @@ function NavBar() {
   const pathName = usePathname();
 
   React.useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 10);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -217,7 +218,9 @@ function BottomNavBarLink({
   return (
     <Button
       key={linkId + title}
-      onClick={() => pathName == "/" ? scrollToElementById(linkId) : push(`/#${linkId}`)}
+      onClick={() =>
+        pathName == "/" ? scrollToElementById(linkId) : push(`/#${linkId}`)
+      }
       radius="none"
       className="flex h-full flex-1 flex-col items-center justify-center bg-transparent text-white transition-all hover:font-bold"
     >
