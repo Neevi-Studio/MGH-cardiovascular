@@ -11,15 +11,24 @@ import "swiper/css";
 import "swiper/css/pagination";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import StructuredData from "@/components/StructuredData";
+import PhysicianSchema from "@/components/PhysicianSchema";
+import HospitalSchema from "@/components/HospitalSchema";
 
 export const metadata: Metadata = {
-  title: "MGH Cardiovascular Associates | Leading Heart Care & Top Cardiologists",
+  title: {
+    default:
+      "MGH Cardiovascular Associates | Leading Heart Care & Top Cardiologists",
+    template: "%s | MGH Cardiovascular Associates",
+  },
   metadataBase: new URL("https://www.mghcardio.com"),
   alternates: {
-    canonical: './',
+    canonical: "./",
+    languages: {
+      "en-US": "https://www.mghcardio.com",
+    },
   },
   description:
-    "Welcome to MGH Cardiovascular Associates, where pioneering heart care meets personalized treatment.",
+    "Welcome to MGH Cardiovascular Associates, where pioneering heart care meets personalized treatment. Expert cardiologists in Paterson, NJ offering comprehensive cardiac testing, preventive care, and interventional cardiology services.",
   keywords: [
     "cardiovascular clinic in paterson nj",
     "Cardiovascular care experts",
@@ -157,7 +166,7 @@ export const metadata: Metadata = {
     "Peripheral Artery Disease Specialist",
     "Heart and Vascular Center Paterson",
     "Cardiac Care Northern NJ",
-    "cardiologist paterson nj"
+    "cardiologist paterson nj",
   ],
   openGraph: {
     title: "MGH Cardiovascular Associates | Premier Heart Care",
@@ -204,7 +213,25 @@ export default function RootLayout({
       <head>
         {/* Preconnect to Google domains */}
         <link rel="preconnect" href="https://www.google.com" />
+        <meta name="theme-color" content="#1e3a5f" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="MGH Cardiovascular" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta name="geo.region" content="US-NJ" />
+        <meta name="geo.placename" content="Paterson" />
+        <meta name="geo.position" content="40.9168;-74.1718" />
+        <meta name="ICBM" content="40.9168, -74.1718" />
+        <meta name="author" content="MGH Cardiovascular Associates" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/logo.png" />
         <StructuredData />
+        <PhysicianSchema />
+        <HospitalSchema />
       </head>
       <body
         className={`${inter.variable} ${liberationSans.variable} ${beVietnamPro.variable} ${amiko.variable} ${lato.variable} ${hlad.className} bg-white`}
@@ -246,7 +273,6 @@ export default function RootLayout({
     </html>
   );
 }
-
 
 //
 //
