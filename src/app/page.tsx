@@ -2,6 +2,7 @@
 import AboutUsSection from "@/components/AboutUsSection";
 import BookAnAppointmentFormSection from "@/components/BookAnAppointmentFormSection";
 import BookAnAppointmentSection from "@/components/BookAnAppointmentSection";
+import OurLocationsSection from "@/components/OurLocationsSection";
 import ControlYourHeartHealthVideoSection from "@/components/ControlYourHeartHealthVideoSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
@@ -48,6 +49,7 @@ export default function Home() {
 
       <div className={mainStyles}>
         <InsuranceAndPaymentOptions />
+        <OurLocationsSection />
         <BookAnAppointmentSection />
         <Testimonials />
       </div>

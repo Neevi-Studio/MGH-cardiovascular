@@ -23,6 +23,11 @@ const accordionItemsData = [
     title: "How Do I Prepare for a Cardiac Test?",
     text: "Specific instructions may vary based on the exam. Generally, you may be asked to avoid caffeine, fast for a few hours, and/or stop certain medications. We will provide all necessary instructions when you book your appointment",
   },
+  {
+    itemKey: "5",
+    title: "Where are your office locations?",
+    text: "We have two convenient locations in New Jersey. Our Paterson office is at 680 Broadway, Suite 503, Paterson, NJ 07514 — reachable at (973) 653-5867. Our East Brunswick office is at E5 Brier Hill Ct, East Brunswick, NJ 08816 — Ph: (732) 698-1331, Fax: (732) 698-1379.",
+  },
 ];
 
 const faqSchemaData = accordionItemsData.map(item => ({

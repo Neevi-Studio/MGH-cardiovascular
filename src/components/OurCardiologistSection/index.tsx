@@ -47,32 +47,38 @@ function OurCardiologistSection() {
           />
         </div>
 
-        <div className="flex w-full flex-col items-center justify-between gap-4 md:flex-row xl:gap-6">
+        <div className="flex w-full flex-col gap-3">
           <Link
-            href={"https://www.google.com/maps"}
+            href={"https://www.google.com/maps/search/680+Broadway+Suite+503+Paterson+NJ+07514"}
             className="w-full"
             target="_blank"
           >
             <Button
               size="lg"
               color="primary"
-              className="flex h-fit flex-1 flex-row gap-x-1 py-2 font-lato max-xl:mx-auto"
+              className="flex h-fit w-full flex-row gap-x-1 py-2 font-lato max-xl:mx-auto"
             >
-              <CiLocationOn className="text-primary-50" size={30} />
+              <CiLocationOn className="shrink-0 text-primary-50" size={30} />
               <p className="whitespace-break-spaces text-left text-xs">
-                {"680 Broadway, Suite 503, Paterson, NJ 07514"}
+                {"680 Broadway, Suite 503\nPaterson, NJ 07514 · (973) 653-5867"}
               </p>
             </Button>
           </Link>
 
-          <Link href={"tel:9736535867"} className="w-full">
+          <Link
+            href={"https://www.google.com/maps/search/E5+Brier+Hill+Ct+East+Brunswick+NJ+08816"}
+            className="w-full"
+            target="_blank"
+          >
             <Button
               size="lg"
               color="primary"
-              className="ml-auto flex flex-1 items-center whitespace-break-spaces py-2 font-lato leading-5 max-xl:mx-auto"
+              className="flex h-fit w-full flex-row gap-x-1 py-2 font-lato max-xl:mx-auto"
             >
-              <ImMobile className="text-primary-50" size={30} />
-              (973) 653-5867
+              <CiLocationOn className="shrink-0 text-primary-50" size={30} />
+              <p className="whitespace-break-spaces text-left text-xs">
+                {"E5 Brier Hill Ct\nEast Brunswick, NJ 08816 · (732) 698-1331"}
+              </p>
             </Button>
           </Link>
         </div>
